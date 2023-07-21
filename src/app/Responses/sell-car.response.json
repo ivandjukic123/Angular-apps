@@ -1,0 +1,106 @@
+{
+  "banner": {
+    "image": {
+      "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+      "alt": "Fordonsbolaget"
+    },
+    "title": "Få Ett Bud På Din Snabbt Och Smidigt",
+    "text": "",
+    "button": {
+      "text": "Köp bil online",
+      "link": "https://fordonsbolaget.se/",
+      "position": "right"
+    }
+  },
+  "recommendations": {
+    "anchor": {
+      "text": "Läs samtliga rekommendationer från Reco",
+      "link": "https://www.reco.se/fordonsbolaget-i-sverige"
+    },
+    "title": "Rekommendationer",
+    "text": "Genom Reco kan du läsa om andras upplevelser hos oss innan ditt köp.",
+    "review_text": ""
+  },
+  "overview": {
+    "points": [
+      {
+        "icon": "fa-solid fa-percent",
+        "title": "Sälj din bil pä under 24h",
+        "text": "<p>Frán att du skickar in din bil för värdering till att du har<br />\npengarna pà kontot tar det oifTh mindre an 24h.</p>\n"
+      }
+    ],
+    "video": {
+      "icon": "fa-solid fa-play",
+      "link": "https://www.youtube.com/embed/6ikh0iQJ49w?autoplay=1&rel=0",
+      "image": {
+        "url": "https://wp-api.fordonsbolaget.se/wp-content/uploads/2021/03/DSC02116-e1615889238528.jpg",
+        "alt": ""
+      }
+    }
+  },
+  "q_and_a": {
+    "title": "Frägor och svar",
+    "items": [
+      {
+        "icon": "fa-solid fa-circle-question",
+        "question": "Köper ni in alla bilar?",
+        "answer": "<p>Vi Köper Din Bil Oavsett Märke Eller Modell. Däremot Jobbar Vi Främst Med Bilar Som Max Är 10 Ar Gamla Och Gätt Mindre Än 12 000 Mil.</p>\n"
+      }
+    ]
+  },
+  "references": [
+    {
+      "title": "David, Gävle",
+      "subtitle": "Sålde Volvo XC40 & Dodge RAM 1500 online",
+      "text": "“Jag har precis sålt min pickup till Fordonsbolaget. En RAM 1500 från 2019. Det är en bil som normalt sätt är ganska svårsåld privat, men jag tog direktkontakt med Gustaf på inköp och fick ett riktigt bra pris direkt. Det gjorde att vi skrev avtal redan samma dag och dagen efter hade jag pengarna på kontot. Dem kom och hämtade bilen hemma hos mig, vilket gjorde det supersmidigt. Det var så smidigt att vi valde att göra affär på vår andra bil också.”",
+      "video_url": "https://www.youtube.com/embed/DCHg9SE1xPE?rel=0"
+    }
+  ],
+  "content": "<h1 class=\"h3 text-center\">Ska du sälja din bil?</h1>\n<h2 class=\"text-red\" style=\"font-size: 1.5rem;\"><span>Vi köper din bil!</span></h2>\n<p><span style=\"font-weight: 400;\">Går du i tankarna om att köpa en ny bil och vet inte va du ska göra av den nuvarande bilen? Många väljer att annonsera den via sociala medier, Blocket eller tidningen men det kan ofta vara en tidskrävande och långsam process. Oroa dig inte, vi på Fordonsbolaget köper gärna din bil! Fyll i uppgifterna i uppgifterna, dvs regnummer och miltal, om bilen i vårt formulär här på sidan så återkommer vi med en kostnadsfri värdering!&nbsp;</span></p>\n<h2 style=\"font-size: 1.5rem;\"><span style=\"color: #000000;\">Sälj bilen online</span></h2>\n<p><span style=\"font-weight: 400;\">För dig som inte har möjlighet att besöka oss så kan du sköta processen online. Genom att fylla i formuläret här bredvid ger vi en kostnadsfri värdering av din bil baserat på årtal, miltal och slitage. När du säljer din bil till oss på Fordonsbolaget så kan du känna dig trygg med att vi ordnar en enkel och smidig process, där vi underlättar hela säljprocessen. När du ska sälja din bil privat kan det ibland dröja innan du hittar en köpare och ofta blir det en segdragen förhandling om priset. Men när du säljer din bil till oss på Fordonsbolaget så kan du tryggt veta att du har pengarna på bankkontot innan överlämning av bilen. Dessutom ansvarar vi för det administrativa kring ägarbyte, avanmälan och löser eventuella lån.</span></p>\n<p><span style=\"font-weight: 400;\"><br />\n</span><span style=\"font-weight: 400;\">Pssst… Du vet väl om att du även kan använda din nuvarande bil som inbyte när du köper en ny bil hos oss! Välkommen in till vår bilhall för att veta mer om hur du kan sälja din bil till oss - eller kontakta oss på 08 322 900!</span></p>\n",
+  "latest_purchased_cars": {
+    "title": "Senast köpta bilar"
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  },
+  "gdpr_policy": {
+    "title": "Integritetspolicy",
+    "text": "<h2><span style=\"color: #999999;\">Varför ska jag läsa denna policy?</span></h2>\n<p><span style=\"color: #999999;\">Denna policy beskriver hur vi på FORDONSBOLAGET INFRACITY AB samlar in, använder och skyddar dina personuppgifter.</span></p>\n<p><span style=\"color: #999999;\">Vilken information samlar ni in om mig?</span></p>\n<p><span style=\"color: #999999;\">Genom att du fyller i något av formulären på vår hemsida samlar vi in information som hjälper oss att tillhandahålla en tjänst till dig, det inkluderar:</span></p>\n<ul>\n<li><span style=\"color: #999999;\">email</span></li>\n<li><span style=\"color: #999999;\">personnummer</span></li>\n<li><span style=\"color: #999999;\">namn</span></li>\n<li><span style=\"color: #999999;\">adress</span></li>\n<li><span style=\"color: #999999;\">kontaktuppgifter</span></li>\n</ul>\n<h2><span style=\"color: #999999;\">Hur kommer ni använda min information?</span></h2>\n<p><span style=\"color: #999999;\">Vi behöver veta en del om dig för att kunna kontakta dig angående våra produkter och tjänster och slutföra avtal med dig. Vi behöver också informationen för att förse dig med <em>informationsutskick</em>. Vi kommer <strong>inte samla in </strong>mer information än vi behöver för att tillhandahålla våra tjänster till dig.</span></p>\n<h2><span style=\"color: #999999;\">Hur länge kommer du ha min information?</span></h2>\n<p><span style=\"color: #999999;\">Vi behåller inte din information längre än nödvändigt. När du köpt en produkt eller tjänst av oss behåller vi informationen så länge som våra åtaganden finns kvar, vilket normalt är 3 år. Information som vi använder för nyhetsbrevsutskick eller marknadsföring kommer behållas fram tills den tidpunk du själv väljer att avprenumerera från den.</span></p>\n<h2><span style=\"color: #999999;\">Med vilka delar ni min information med?</span></h2>\n<p><span style=\"color: #999999;\">Dina personuppgifter kan komma att hanteras av personal i <strong>Sverige</strong>, ingen tredje part har tillgång till dina personuppgifter så länge inte lagen kräver att vi delar den.</span></p>\n<p><span style=\"color: #999999;\">Vid finansiering delas din information med den bank som står för finansen.</span></p>\n<p><span style=\"color: #999999;\">Vi har rutiner på plats för att säkerställa att dina personuppgifter hanteras i tryggt och säkert enlighet med gällande lagstiftning. Mer information kan du få genom att kontakta oss via e-post.</span></p>\n<h2><span style=\"color: #999999;\">Vart har du min information?</span></h2>\n<p><span style=\"color: #999999;\">Din information lagras i datacenter inom den Europeiska Unionen. Av tekniska skäl så kan våra underleverantörer behöva flytta information till andra länder utanför EU. Om detta sker så används lämpliga skyddsåtgärder och standardiserade dataskyddsbestämmelser som godkänts av EU-kommissionen.</span></p>\n<h2><span style=\"color: #999999;\">Vad är mina rättigheter?</span></h2>\n<p><span style=\"color: #999999;\"><strong>Rätt till information:</strong> Du kan begära att få en kopia på de personuppgifter vi har om dig.</span><br />\n<span style=\"color: #999999;\"><strong>Rätt till rättelse:</strong> Vi vill säkerställa att din information är uppdaterad och korrekt. Du kan begära att få din information rättad eller borttagen om du anser att den är inkorrekt.</span><br />\n<span style=\"color: #999999;\"><strong>Rätt till radering:</strong> Du kan begära att vi ska radera dina personuppgifter. Vi får inte radera uppgifter som lagen kräver att vi behåller.</span><br />\n<span style=\"color: #999999;\"><strong>Dataportabilitet:</strong> Du kan be oss att flytta dina personuppgifter från vår IT miljö till någon annan, antingen ett annat företag eller till dig. Detta gäller inte uppgifter som lagen kräver att vi behåller</span><br />\n<span style=\"color: #999999;\"><strong>Ta tillbaka samtycke:</strong> Du kan ta tillbaka ditt samtycke till att dela din information eller att ta emot marknadsföring / utskick när som helst. Antingen genom att avprenumerera från meddelandet eller kontakta oss via e-post.</span></p>\n<h2><span style=\"color: #999999;\">Hur kan jag använda mina rättigheter?</span></h2>\n<p><span style=\"color: #999999;\">Om du vill använda någon av dina rättigheter så kontaktar du oss via e-post som finns längst ned i denna policy</span></p>\n<h2><span style=\"color: #999999;\">Uppdateringar till denna policy</span></h2>\n<p><span style=\"color: #999999;\">Vi kan komma att uppdatera denna policy och kommer då publicera dem på denna webbsida. Denna policy uppdaterades senast den 24 September 2018.</span></p>\n<h2><span style=\"color: #999999;\">Hur du kan kontakta oss</span></h2>\n<p><span style=\"color: #999999;\">Om du har några frågor angående denna policy eller hur vi använder din information, eller dina rättigheter så kan du kontakta oss på följande adress:</span></p>\n<p><span style=\"color: #999999;\">FORDONSBOLAGET AB</span><br />\n<span style=\"color: #999999;\">RÅBÄCKSVÄGEN 1</span><br />\n<span style=\"color: #999999;\">194 65 UPPLANDS VÄSBY</span><br />\n<span style=\"color: #999999;\">E-mail: aksel.sveen@fordonsbolaget.se</span></p>\n<p>This site is protected by reCAPTCHA and the Google<br />\n<a href=\"https://policies.google.com/privacy\">Privacy Policy</a> and<br />\n<a href=\"https://policies.google.com/terms\">Terms of Service</a> apply.</p>\n"
+  },
+  "form": {
+    "title": "SÄLJ DIN BIL",
+    "subtitle": "INFORMATION ABOUT THE CAR",
+    "fields": {
+      "reg_number": {
+        "label": "Regnummer",
+        "error": "Vänligen fyll i regnummer"
+      },
+      "mileage": {
+        "label": "Miltal",
+        "suffix": "mil",
+        "error": "Vänligen fyll i miltal"
+      },
+      "email": {
+        "label": "Epost",
+        "error": "Vänligen kontrollera epostadressen "
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Telefon",
+        "error": "Vänligen fyll i miltal"
+      },
+      "gdpr": {
+        "text": "Jag samtycker till att min uppgifter hanteras enligt gällande integritetspolicy.",
+        "error": "Vänligen kontrollera formuläret."
+      }
+    },
+    "button": "Skicka for vardering"
+  }
+}

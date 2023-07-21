@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form>
+        <div class="row">
+          <div class="col-md-4">
+            <label class="form-label"
+                   for="table-search">Search by term</label>
+            <input id="table-search"
+                   type="text"
+                   class="form-control"
+                   name="searchTerm"
+                   placeholder="Search example: iPhone X"
+                   [ngModel]="searchTerm"
+                   (ngModelChange)="onSearchTermModelChange($event)">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Search by category</label>
+            <ng-select [items]="categories"
+                       [(ngModel)]="category"
+                       (change)="onCategoryChange()"
+                       placeholder="Search by category"
+                       name="category">
+            </ng-select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Records per page</label>
+            <ng-select [items]="pageRecordsArr"
+                       [(ngModel)]="selectedRecord"
+                       (change)="onRecordSelect()"
+                       [clearable]="false"
+                       placeholder="Records per page"
+                       name="records">
+            </ng-select>
+          </div>
+        </div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">Products</th>
+            <th scope="col">Price</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Category</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Discount %</th>
+          </tr>
+          </thead>
+          <tbody>
+          <h3 *ngIf="products.length === 0"
+              class="">No products!</h3>
+          <tr *ngFor="let product of products">
+            <td>
+              <img [src]=product.thumbnail
+                   class="img-fluid p-thumbnail c-pointer"
+                   alt=""
+                   (click)="openImageCarousel(product.images, imageModalRef)">
+              {{ product.title }}
+            </td>
+            <td>{{ product.price | suffix: "€"}}</td>
+            <td>{{ product.brand }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.stock }}</td>
+            <td>{{ product.rating }}</td>
+            <td>{{ product.discountPercentage | suffix: "%"}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+      <ngb-pagination [collectionSize]="pagination.total"
+                      [pageSize]="pagination.limit"
+                      [(page)]="pagination.page"
+                      (pageChange)="onPageSelect1($event)"></ngb-pagination>
+    </div>
+  </div>
+</div>
+<ng-template #imageModalRef
+             let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Carousel Modal</h4>
+    <button type="button"
+            class="btn-close"
+            (click)="modal.close()"></button>
+  </div>
+  <div class="modal-body">
+    <ngb-carousel>
+      <ng-template ngbSlide
+                   *ngFor="let image of images">
+        <img [src]=image
+             alt="">
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</ng-template>

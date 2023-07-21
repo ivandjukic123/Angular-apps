@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <form (ngSubmit)="onTodoFormSubmit()"
+          class="col-md-6">
+      <h3 class="text-center py-4">Todo App</h3>
+      <div class="d-flex mb-3">
+        <input [(ngModel)]="formModel.todoName"
+               name="text"
+               type="text"
+               class="form-control"
+               placeholder="Enter a todo here"/>
+        <button type="submit"
+                class="btn btn-primary ms-2">
+          Save
+        </button>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <select [(ngModel)]="formModel.filterBy"
+                  (change)="change()"
+                  class="form-select"
+                  name="selectUrgency">
+            <option *ngFor="let option of selectOptions"
+                    [value]="option.value">
+              {{ option.displayText }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div *ngFor="let radio of radioOptions; let index = index"
+             [ngClass]="{'ps-0': index === 0}"
+             class="form-check form-check-inline">
+          <input class="form-check-input ms-1"
+                 [(ngModel)]="formModel.priority"
+                 [value]="radio.value"
+                 type="radio"
+                 name="type"
+                 id="todo-type-{{ index }}">
+          <label class="form-check-label ps-2"
+                 for="todo-type-{{ index }}">
+            {{ radio.displayText }}
+          </label>
+        </div>
+      </div>
+
+      <ul class="list-group">
+        <li *ngFor="let todo of todos"
+            class="list-group-item d-flex align-items-center justify-content-between">
+          <strong>{{ todo.content }} - {{ todo.priority | lowercase }}</strong>
+          <button (click)="deleteTodo(todo.id)"
+                  class="btn btn-danger">
+            Delete
+          </button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>

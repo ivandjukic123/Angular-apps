@@ -1,0 +1,70 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-5">
+      <ngb-accordion [closeOthers]="true">
+        <ngb-panel>
+          <ng-template ngbPanelHeader
+                       let-opened="opened">
+            <button ngbPanelToggle
+                    [ngClass]="{'--opened': opened}"
+                    class="cm-accordion-btn">
+              <i class="bi bi-person me-1"></i> Profile
+            </button>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelHeader
+                       let-opened="opened">
+            <button ngbPanelToggle
+                    [ngClass]="{'--opened': opened}"
+                    class="cm-accordion-btn cm-button-group">
+              <div class="cm-badge-group">
+                <i class="bi bi-envelope me-1"></i> Messages
+              </div>
+              <span class="badge cm-badge">11</span>
+            </button>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelHeader
+                       let-opened="opened">
+            <button ngbPanelToggle
+                    [ngClass]="{'--opened': opened}"
+                    class="cm-accordion-btn">
+              <i class="bi bi-gear me-1"></i> Settings
+            </button>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <ul class="cm-accordion-body nav flex-column">
+              <li class="nav-item"><a class="nav-link">Profile</a></li>
+              <li class="nav-item"><a class="nav-link">Password</a></li>
+              <li class="nav-item"><a class="nav-link">Notifications</a></li>
+              <li class="nav-item"><a class="nav-link">Pro Account</a></li>
+              <li class="nav-item"><a class="nav-link">Billing</a></li>
+            </ul>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelHeader
+                       let-opened="opened">
+            <button ngbPanelToggle
+                    [ngClass]="{'--opened': opened}"
+                    class="cm-accordion-btn">
+              <i class="bi bi-key me-1"></i> Logout
+            </button>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </div>
+</div>
+

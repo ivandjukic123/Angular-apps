@@ -1,0 +1,11 @@
+<div class="container pt-3">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-6">
+      <ul>
+        <li *ngFor="let todo of todos">
+          {{ todo.id }} - {{ todo.todo }} - {{ todo.completed }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

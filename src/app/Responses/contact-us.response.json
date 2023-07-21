@@ -1,0 +1,134 @@
+{
+  "banner": {
+    "image": {
+      "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+      "alt": "Fordonsbolaget"
+    },
+    "title": "Få Ett Bud På Din Snabbt Och Smidigt",
+    "text": "",
+    "button": {
+      "text": "Köp bil online",
+      "link": "https://fordonsbolaget.se/",
+      "position": "right"
+    }
+  },
+  "employees": [
+    {
+      "name": "SEBASTIAN AHLBAUM",
+      "contact_number": "08-590 788 99",
+      "designation": "Säljare",
+      "category": "Försäljning",
+      "email": "sebastian.ahlbaum@fordonsbolaget.se",
+      "image": {
+        "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/Sebastian-Ahlbaum.jpg",
+        "alt": "Sebastian Ahlbaum"
+      },
+      "searchable": true
+    }
+  ],
+  "info": {
+    "address": {
+      "icon": "fa-light fa-map-location-dot",
+      "title": "PERSONBILAR",
+      "text": "Råbäcksvägen 1, 194 65 Upplands Väsby, Stockholm; Sweden"
+    },
+    "address_transport": {
+      "title": "TRANSPORTBILAR",
+      "text": "Stockholmsvägen 22, 194 61 Upplands Väsby, Stockholm; Sweden"
+    },
+    "telephone": {
+      "icon": "fas fa-phone",
+      "title": "RING OSS",
+      "text": "08 - 322 900"
+    },
+    "email_sales": {
+      "icon": "fa-light fa-envelope",
+      "title": "PERSONBILAR",
+      "text": "info@fordonsbolaget.se"
+    },
+    "email_transport": {
+      "title": "TRANSPORTBILAR",
+      "email": "transport@fordonsbolaget.se"
+    },
+    "email_workshop": {
+      "icon": "fas fa-envelope",
+      "title": "VERKSTAD",
+      "email": "verkstad@fordonsbolaget.se"
+    },
+    "sales_hours": {
+      "title": "ÖPPETTIDER PERSONBILAR",
+      "icon": "far fa-clock",
+      "description": ""
+    },
+    "transport_hours": {
+      "title": "ÖPPETTIDER PERSONBILAR",
+      "icon": "far fa-clock",
+      "description": ""
+    },
+    "workshop_hours": {
+      "title": "ÖPPETTIDER PERSONBILAR",
+      "icon": "far fa-clock",
+      "description": ""
+    }
+  },
+  "info_boxes": [
+    {
+      "icon": "fa-regular fa-clock",
+      "title": " ÖPPETTIDER",
+      "text": "<p>Har du inte tid att komma under våra öppettider? Ring, så ser vi till att du kan kika på bilen när det passar dig.</p>\n"
+    }
+  ],
+  "map": {
+    "latitude": "59.505755",
+    "longitude": "17.928674",
+    "zoom": "13",
+    "marker_image": {
+      "url": "https://wp-api.fordonsbolaget.se/wp-content/uploads/2021/02/pointer-3.png",
+      "alt": ""
+    },
+    "locations": [
+      {
+        "title": "Transportbilar, Fordonsbolaget AB",
+        "text": "Stockholmsvägen 22<br>\r\nUpplands Väsby<br>\r\n<a href=\"https://www.google.com/maps/dir//Stockholmsv%C3%A4gen+22,+194+61+Upplands+V%C3%A4sby/@59.5107019,17.922485,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x465f986d739cfe05:0x6792354df516a5a!2m2!1d17.9268624!2d59.5106965?hl=sv\" target=\"_blank\" style=\"font-weight:500;text-decoration:none;\">Vägbeskrivning</a>",
+        "latitude": "59.510790",
+        "longitude": "17.926960"
+      }
+    ]
+  },
+  "gdpr_policy": {
+    "title": "Integritetspolicy",
+    "text": "<h2><span style=\"color: #999999;\">Varför ska jag läsa denna policy?</span></h2>\n<p><span style=\"color: #999999;\">Denna policy beskriver hur vi på FORDONSBOLAGET INFRACITY AB samlar in, använder och skyddar dina personuppgifter.</span></p>\n<p><span style=\"color: #999999;\">Vilken information samlar ni in om mig?</span></p>\n<p><span style=\"color: #999999;\">Genom att du fyller i något av formulären på vår hemsida samlar vi in information som hjälper oss att tillhandahålla en tjänst till dig, det inkluderar:</span></p>\n<ul>\n<li><span style=\"color: #999999;\">email</span></li>\n<li><span style=\"color: #999999;\">personnummer</span></li>\n<li><span style=\"color: #999999;\">namn</span></li>\n<li><span style=\"color: #999999;\">adress</span></li>\n<li><span style=\"color: #999999;\">kontaktuppgifter</span></li>\n</ul>\n<h2><span style=\"color: #999999;\">Hur kommer ni använda min information?</span></h2>\n<p><span style=\"color: #999999;\">Vi behöver veta en del om dig för att kunna kontakta dig angående våra produkter och tjänster och slutföra avtal med dig. Vi behöver också informationen för att förse dig med <em>informationsutskick</em>. Vi kommer <strong>inte samla in </strong>mer information än vi behöver för att tillhandahålla våra tjänster till dig.</span></p>\n<h2><span style=\"color: #999999;\">Hur länge kommer du ha min information?</span></h2>\n<p><span style=\"color: #999999;\">Vi behåller inte din information längre än nödvändigt. När du köpt en produkt eller tjänst av oss behåller vi informationen så länge som våra åtaganden finns kvar, vilket normalt är 3 år. Information som vi använder för nyhetsbrevsutskick eller marknadsföring kommer behållas fram tills den tidpunk du själv väljer att avprenumerera från den.</span></p>\n<h2><span style=\"color: #999999;\">Med vilka delar ni min information med?</span></h2>\n<p><span style=\"color: #999999;\">Dina personuppgifter kan komma att hanteras av personal i <strong>Sverige</strong>, ingen tredje part har tillgång till dina personuppgifter så länge inte lagen kräver att vi delar den.</span></p>\n<p><span style=\"color: #999999;\">Vid finansiering delas din information med den bank som står för finansen.</span></p>\n<p><span style=\"color: #999999;\">Vi har rutiner på plats för att säkerställa att dina personuppgifter hanteras i tryggt och säkert enlighet med gällande lagstiftning. Mer information kan du få genom att kontakta oss via e-post.</span></p>\n<h2><span style=\"color: #999999;\">Vart har du min information?</span></h2>\n<p><span style=\"color: #999999;\">Din information lagras i datacenter inom den Europeiska Unionen. Av tekniska skäl så kan våra underleverantörer behöva flytta information till andra länder utanför EU. Om detta sker så används lämpliga skyddsåtgärder och standardiserade dataskyddsbestämmelser som godkänts av EU-kommissionen.</span></p>\n<h2><span style=\"color: #999999;\">Vad är mina rättigheter?</span></h2>\n<p><span style=\"color: #999999;\"><strong>Rätt till information:</strong> Du kan begära att få en kopia på de personuppgifter vi har om dig.</span><br />\n<span style=\"color: #999999;\"><strong>Rätt till rättelse:</strong> Vi vill säkerställa att din information är uppdaterad och korrekt. Du kan begära att få din information rättad eller borttagen om du anser att den är inkorrekt.</span><br />\n<span style=\"color: #999999;\"><strong>Rätt till radering:</strong> Du kan begära att vi ska radera dina personuppgifter. Vi får inte radera uppgifter som lagen kräver att vi behåller.</span><br />\n<span style=\"color: #999999;\"><strong>Dataportabilitet:</strong> Du kan be oss att flytta dina personuppgifter från vår IT miljö till någon annan, antingen ett annat företag eller till dig. Detta gäller inte uppgifter som lagen kräver att vi behåller</span><br />\n<span style=\"color: #999999;\"><strong>Ta tillbaka samtycke:</strong> Du kan ta tillbaka ditt samtycke till att dela din information eller att ta emot marknadsföring / utskick när som helst. Antingen genom att avprenumerera från meddelandet eller kontakta oss via e-post.</span></p>\n<h2><span style=\"color: #999999;\">Hur kan jag använda mina rättigheter?</span></h2>\n<p><span style=\"color: #999999;\">Om du vill använda någon av dina rättigheter så kontaktar du oss via e-post som finns längst ned i denna policy</span></p>\n<h2><span style=\"color: #999999;\">Uppdateringar till denna policy</span></h2>\n<p><span style=\"color: #999999;\">Vi kan komma att uppdatera denna policy och kommer då publicera dem på denna webbsida. Denna policy uppdaterades senast den 24 September 2018.</span></p>\n<h2><span style=\"color: #999999;\">Hur du kan kontakta oss</span></h2>\n<p><span style=\"color: #999999;\">Om du har några frågor angående denna policy eller hur vi använder din information, eller dina rättigheter så kan du kontakta oss på följande adress:</span></p>\n<p><span style=\"color: #999999;\">FORDONSBOLAGET AB</span><br />\n<span style=\"color: #999999;\">RÅBÄCKSVÄGEN 1</span><br />\n<span style=\"color: #999999;\">194 65 UPPLANDS VÄSBY</span><br />\n<span style=\"color: #999999;\">E-mail: aksel.sveen@fordonsbolaget.se</span></p>\n<p>This site is protected by reCAPTCHA and the Google<br />\n<a href=\"https://policies.google.com/privacy\">Privacy Policy</a> and<br />\n<a href=\"https://policies.google.com/terms\">Terms of Service</a> apply.</p>\n"
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  },
+  "form": {
+    "name": {
+      "placeholder": "",
+      "error": ""
+    },
+    "email": {
+      "placeholder": "Epost",
+      "error": "Vänligen kontrollera epostadressen "
+    },
+    "phone": {
+      "placeholder": "Telefon"
+    },
+    "comment": {
+      "placeholder": "",
+      "error": ""
+    },
+    "gdpr": {
+      "text": "",
+      "error": ""
+    },
+    "button": "Skicka"
+  }
+}

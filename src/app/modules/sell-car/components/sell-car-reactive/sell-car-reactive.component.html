@@ -1,0 +1,105 @@
+<form [formGroup]="sellCarForm"
+      (ngSubmit)="onSubmit()">
+  <h5>Sell your car (R)</h5>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <label for="regNo"
+               class="">Reg number*</label>
+        <input type="text"
+               class="form-control"
+               name="regNo"
+               [ngClass]="{'input-error': regNo!.invalid && regNo!.touched}"
+               formControlName="regNo"
+               id="regNo">
+        <div *ngIf="regNo?.invalid && (regNo?.dirty || regNo?.touched)"
+             class="cm-invalid-feedback">
+          <ng-container *ngIf="regNo?.errors?.['required']">
+            Registration number is required
+          </ng-container>
+          <ng-container *ngIf="regNo?.errors?.['pattern']">
+            Proper format required AAA000 or AAA00A
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <label for="mileage"
+               class="">Mileage*</label>
+        <input type="number"
+               formControlName="mileage"
+               class="form-control"
+               [ngClass]="{'input-error': mileage!.invalid && mileage!.touched}"
+               name="mileage"
+               id="mileage">
+        <div *ngIf="mileage?.invalid && (mileage?.dirty || mileage?.touched)"
+             class="cm-invalid-feedback">
+          <ng-container *ngIf="mileage?.errors?.['required']">
+            Mileage is required
+          </ng-container>
+          <ng-container *ngIf="mileage?.errors?.['pattern']">
+            Mileage must be integer
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <label for="email"
+               class="">E-mail*</label>
+        <input type="email"
+               formControlName="email"
+               [ngClass]="{'input-error': email!.invalid && email!.touched}"
+               class="form-control"
+               name="email"
+               id="email">
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+             class="cm-invalid-feedback">
+          <ng-container *ngIf="email?.errors?.['required']">
+            Email is required
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <label for="phone"
+               class="">Phone</label>
+        <input type="phone"
+               formControlName="phone"
+               class="form-control"
+               name="phone"
+               id="phone">
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check mb-3">
+        <input class="form-check-input"
+               type="checkbox"
+               formControlName="acceptedGdprConsent"
+               id="acceptedGDPRConsent">
+        <label class="form-check-label"
+               for="acceptedGDPRConsent">
+          Agree to terms and conditions
+        </label>
+        <div *ngIf="acceptedGdprConsent?.invalid && (acceptedGdprConsent?.dirty || acceptedGdprConsent?.touched)"
+             class="cm-invalid-feedback">
+          <ng-container *ngIf="acceptedGdprConsent?.errors?.['required']">
+            You must agree before submitting.
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <button type="submit"
+                class="btn btn-primary">
+          Send for valuation
+          <span [hidden]="!loading"
+                class="cm-spinner"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,139 @@
+{
+  "company_overview": {
+    "main_title": "Köpa bil i Stockholm & Online - Vi köper och säljer bilar",
+    "services": [
+      {
+        "content": {
+          "icon": {
+            "icon": "fa-thin fa-seal-question",
+            "text": "angry title"
+          },
+          "title": "Title",
+          "subtitle": "Subtitle",
+          "paragraph": "",
+          "button": {
+            "link": "/",
+            "text": "button #1"
+          }
+        },
+        "media": {
+          "type": "IMAGE/VIDEO",
+          "url": ""
+        }
+      }
+    ]
+  },
+  "promotion": {
+    "content": "<p>Nya Honda HR-V Hybrid är en vinnande kombination av hög prestanda och förstklassigt komfort och nyskapade teknik! Det är en självladdande hybrid som är byggd för en ny generation miljömedvetna förare! Det finns många fördelar med nya HR-V Hybrid: Den laddar av sig själv genom att alstra ström när du kör bilen, vilket gör att du slipper besväret med att behöva hitta en laddstation. Förbättrad bränsleekonomi, du tar dig mycket längre till en mycket lägre kostnad när du kör HR-V med e:HEV-drivlina.</p>\n<p><a class=\"f-c-btn --green\" href=\"https://fordonsbolaget.se/kampanj/intresseanmalan-for-nya-honda-hr-v-hybrid\">Beställ Honda HR-V Hybrid nu!</a></p>\n<h3 class=\"mb-3 mt-4\">Snabbfakta</h3>\n",
+    "facts": [
+      {
+        "icon": "fa-solid fa-battery-bolt",
+        "title": "SJÄLVLADDANDE"
+      }
+    ],
+    "image": {
+      "url": "https://fordonsbolaget.se/wp-content/uploads/2020/09/HR-V-Hybrid-1.jpg",
+      "alt": "HR-V Hybrid"
+    },
+    "title": "Nya Honda HR-V Hybrid!",
+    "title_after": ""
+  },
+  "incoming_cars": {
+    "title": "Inkomna bilar"
+  },
+  "our_services": {
+    "title": "Våra tjänster",
+    "text": "<p>Vi erbjuder allt från nya Hondabilar till ett brett urval av begagnade premiumbilar. Hos oss på Fordonsbolaget hittar du även vår verkstad som utför reparationer på alla bilmodeller. Utöver det erbjuder vi skadehantering, så som omlackering och rutbyten. Vi sköter all kontakt med ditt försäkringsbolag, allt för att din upplevelse hos oss ska bil så bra som möjligt.</p>\n",
+    "image": {
+      "url": "https://fordonsbolaget.se/wp-content/uploads/2020/09/IMG_20200908_111000.jpg",
+      "alt": "IMG_20200908_111000"
+    },
+    "services": [
+      {
+        "title": "BEGAGNADE PREMIUMBILAR",
+        "text": "<p>Vi erbjuder ett brett utbud av lätt begagnade premiumbilar. Med inriktning på svensksålda bilar med låga mil.<br />\n<a style=\"text-decoration: none;\" href=\"/bilar\">Klicka här för att komma till lagret</a></p>\n",
+        "icon": "fa-solid fa-car-rear"
+      }
+    ]
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  },
+  "search": {
+    "accordion_clear_option_label": "Stäng alla filter",
+    "accordion_more_option_label": "Öppna fler filter",
+    "all_car_in_stock_label": "Alla bilar i lager.",
+    "all_car_in_stock_tootip": "Inga bilar matchar din sökning. Vänligen ändra dina sökning.",
+    "body_type_not_found_message": "Inga resultat",
+    "body_type_placeholder": "Karosseri",
+    "body_type_placeholder_on_focus": "Sök här...",
+    "body_type_tooltip": "Välj fordonstyp först",
+    "button_label_find_car": "Sök bil",
+    "button_label_no_result": "Inga träffar",
+    "fuel_placeholder": "Bränsle",
+    "gearbox_placeholder": "Växellåda",
+    "mileage_label": "Miltal",
+    "mileage_suffix": "mil",
+    "new_used_vehicle_placeholder": "Nya och begagnade",
+    "price_label": "Pris",
+    "price_suffix": "kr",
+    "search_placeholder_max_tag_limit": "Max limit search tags",
+    "search_placeholder_search_vehicle": "Sök efter valfri bil här...",
+    "search_tip_label": "Tips: Du kan söka på märke, modell, motor samt utrustning",
+    "vat_deductible": "Leasbar",
+    "vehicle_color_not_found_message": "Färgen hittades inte",
+    "vehicle_color_placeholder": "Färg",
+    "vehicle_color_placeholder_on_focus": "Sök här...",
+    "vehicle_make_not_found_message": "Märket hittades inte",
+    "vehicle_make_placeholder": "Märke",
+    "vehicle_make_placeholder_on_focus": "Sök här...",
+    "vehicle_model_not_found_message": "Modeller hittades inte",
+    "vehicle_model_placeholder": "Modell",
+    "vehicle_model_placeholder_on_focus": "Sök här...",
+    "vehicle_model_tooltip": "Välj märke först",
+    "vehicle_type_placeholder": "Fordonstyp",
+    "year_label": "Årsmodell"
+  },
+  "newsletter": {
+    "title": "FÅ VÅRT NYHETSBREV",
+    "subtitle": "Fyll i din mailadress och få våra spännande nyheter",
+    "input_placeholder": "Skriv din epost",
+    "button_text": "Prenumerera",
+    "alert_title": "Tack för din prenumeration!"
+  },
+  "reco": {
+    "button": {
+      "link": "https://www.reco.se/fordonsbolaget-i-sverige",
+      "text": "Läs samtliga rekommendationer från Reco"
+    },
+    "seller": "Säljare",
+    "title_before": "Vad tycker våra kunder?",
+    "title": "Rekommendationerrrr",
+    "title_after": "Våra rekommendationer kommer från Reco.se.\r\nGenom Reco kan du läsa om andras upplevelser hos oss innan ditt besök."
+  },
+  "banner": {
+    "image": {
+      "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+      "alt": "Fordonsbolaget"
+    },
+    "title": "Få Ett Bud På Din Snabbt Och Smidigt",
+    "text": "",
+    "button": {
+      "text": "Köp bil online",
+      "link": "https://fordonsbolaget.se/",
+      "position": "right"
+    }
+  },
+  "default_car_image": {
+    "url": "https://cdn.shopify.com/s/files/1/0274/1202/9492/products/IMG_20200529_163000_1024x1024.jpg?v=1590720000",
+    "alt": "Bamboo Toothbrush"
+  }
+}
+

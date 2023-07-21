@@ -1,0 +1,50 @@
+{
+  "banner": {
+    "image": {
+      "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+      "alt": "Fordonsbolaget"
+    },
+    "title": "Få Ett Bud På Din Snabbt Och Smidigt",
+    "text": "",
+    "button": {
+      "text": "",
+      "link": "",
+      "position": "right"
+    }
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  },
+  "team": {
+    "title": "VÅRA MEDARBETARE",
+    "icon": {
+      "email": "fa-regular fa-envelope",
+      "phone": ""
+    },
+    "teams": [
+      {
+        "all_employees": [
+          {
+            "name": "Asif Ahmad",
+            "image": {
+              "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/Asif-Ahmad.jpg",
+              "alt": "Asif Ahmad"
+            },
+            "email": "asif.ahmad@fordonsbolaget.se",
+            "contact_number": "08-590 788 95",
+            "designation": "Säljare"
+            }
+        ],
+        "category": "Försäljning"
+      }
+    ]
+
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "sidebar": {
+    "quick_facts": [
+      {
+        "icon": "fa-light fa-calendar-lines",
+        "type": "YEAR_MODEL"
+      }
+    ],
+    "links": {
+      "icon": "fa-light fa-video-plus",
+      "type": "BAMBUSER",
+      "text": "Starta videosamtal"
+    },
+    "button": "Kop online",
+    "contact": {
+      "icon": "fa-light fa-phone",
+      "phone": "08 - 322 900",
+      "text": "Ring oss gärna med dina frågor!"
+    }
+  },
+  "accordion": [
+    {
+      "icon": "fa-light fa-list-radio",
+      "name": "Översikt",
+      "sort": "1",
+      "status": "enabled",
+      "template": "info_template",
+      "type": "template"
+    }
+  ],
+  "view_360": {
+    "exterior": {
+      "icon": "fa-light fa-360-degrees",
+      "title": "Exteriör"
+    },
+    "interior": {
+      "icon": "fa-light fa-360-degrees",
+      "title": "Interiör"
+    },
+    "main": {
+      "icon": "fa-light fa-cube",
+      "title": "Virtuell 360°"
+    }
+  },
+  "similar_cars": {
+    "title": "Liknande Bilar"
+  },
+  "modal_form": {
+    "title": "Köp på distans",
+    "subtitle": "INTRESSEANMÄLAN",
+    "fields": {
+      "name": {
+        "label": "",
+        "placeholder": "",
+        "error": ""
+      },
+      "email": {
+        "label": "Epost",
+        "placeholder": "",
+        "error": "Vänligen kontrollera epostadressen "
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Telefon",
+        "error": "Vänligen fyll i miltal"
+      },
+      "exchange": {
+        "title": "",
+        "mileage": "",
+        "regNumber": ""
+      },
+      "comment": {
+        "label": "",
+        "placeholder": ""
+      },
+      "gdpr": {
+        "text": "",
+        "error": ""
+      }
+    },
+    "button": "Skicka"
+  },
+  "calculator": {
+    "title": "Räkna på finans",
+    "subtitle": "Vad kostar det?"
+  },
+  "gdpr_policy": {
+    "title": "Integritetspolicy",
+    "text": "<h2><span style=\"color: #999999;\">Varför ska jag läsa denna policy?</span></h2>\n<p><span style=\"color: #999999;\">Denna policy beskriver hur vi på FORDONSBOLAGET INFRACITY AB samlar in, använder och skyddar dina personuppgifter.</span></p>\n<p><span style=\"color: #999999;\">Vilken information samlar ni in om mig?</span></p>\n<p><span style=\"color: #999999;\">Genom att du fyller i något av formulären på vår hemsida samlar vi in information som hjälper oss att tillhandahålla en tjänst till dig, det inkluderar:</span></p>\n<ul>\n<li><span style=\"color: #999999;\">email</span></li>\n<li><span style=\"color: #999999;\">personnummer</span></li>\n<li><span style=\"color: #999999;\">namn</span></li>\n<li><span style=\"color: #999999;\">adress</span></li>\n<li><span style=\"color: #999999;\">kontaktuppgifter</span></li>\n</ul>\n<h2><span style=\"color: #999999;\">Hur kommer ni använda min information?</span></h2>\n<p><span style=\"color: #999999;\">Vi behöver veta en del om dig för att kunna kontakta dig angående våra produkter och tjänster och slutföra avtal med dig. Vi behöver också informationen för att förse dig med <em>informationsutskick</em>. Vi kommer <strong>inte samla in </strong>mer information än vi behöver för att tillhandahålla våra tjänster till dig.</span></p>\n<h2><span style=\"color: #999999;\">Hur länge kommer du ha min information?</span></h2>\n<p><span style=\"color: #999999;\">Vi behåller inte din information längre än nödvändigt. När du köpt en produkt eller tjänst av oss behåller vi informationen så länge som våra åtaganden finns kvar, vilket normalt är 3 år. Information som vi använder för nyhetsbrevsutskick eller marknadsföring kommer behållas fram tills den tidpunk du själv väljer att avprenumerera från den.</span></p>\n<h2><span style=\"color: #999999;\">Med vilka delar ni min information med?</span></h2>\n<p><span style=\"color: #999999;\">Dina personuppgifter kan komma att hanteras av personal i <strong>Sverige</strong>, ingen tredje part har tillgång till dina personuppgifter så länge inte lagen kräver att vi delar den.</span></p>\n<p><span style=\"color: #999999;\">Vid finansiering delas din information med den bank som står för finansen.</span></p>\n<p><span style=\"color: #999999;\">Vi har rutiner på plats för att säkerställa att dina personuppgifter hanteras i tryggt och säkert enlighet med gällande lagstiftning. Mer information kan du få genom att kontakta oss via e-post.</span></p>\n<h2><span style=\"color: #999999;\">Vart har du min information?</span></h2>\n<p><span style=\"color: #999999;\">Din information lagras i datacenter inom den Europeiska Unionen. Av tekniska skäl så kan våra underleverantörer behöva flytta information till andra länder utanför EU. Om detta sker så används lämpliga skyddsåtgärder och standardiserade dataskyddsbestämmelser som godkänts av EU-kommissionen.</span></p>\n<h2><span style=\"color: #999999;\">Vad är mina rättigheter?</span></h2>\n<p><span style=\"color: #999999;\"><strong>Rätt till information:</strong> Du kan begära att få en kopia på de personuppgifter vi har om dig.</span><br />\n<span style=\"color: #999999;\"><strong>Rätt till rättelse:</strong> Vi vill säkerställa att din information är uppdaterad och korrekt. Du kan begära att få din information rättad eller borttagen om du anser att den är inkorrekt.</span><br />\n<span style=\"color: #999999;\"><strong>Rätt till radering:</strong> Du kan begära att vi ska radera dina personuppgifter. Vi får inte radera uppgifter som lagen kräver att vi behåller.</span><br />\n<span style=\"color: #999999;\"><strong>Dataportabilitet:</strong> Du kan be oss att flytta dina personuppgifter från vår IT miljö till någon annan, antingen ett annat företag eller till dig. Detta gäller inte uppgifter som lagen kräver att vi behåller</span><br />\n<span style=\"color: #999999;\"><strong>Ta tillbaka samtycke:</strong> Du kan ta tillbaka ditt samtycke till att dela din information eller att ta emot marknadsföring / utskick när som helst. Antingen genom att avprenumerera från meddelandet eller kontakta oss via e-post.</span></p>\n<h2><span style=\"color: #999999;\">Hur kan jag använda mina rättigheter?</span></h2>\n<p><span style=\"color: #999999;\">Om du vill använda någon av dina rättigheter så kontaktar du oss via e-post som finns längst ned i denna policy</span></p>\n<h2><span style=\"color: #999999;\">Uppdateringar till denna policy</span></h2>\n<p><span style=\"color: #999999;\">Vi kan komma att uppdatera denna policy och kommer då publicera dem på denna webbsida. Denna policy uppdaterades senast den 24 September 2018.</span></p>\n<h2><span style=\"color: #999999;\">Hur du kan kontakta oss</span></h2>\n<p><span style=\"color: #999999;\">Om du har några frågor angående denna policy eller hur vi använder din information, eller dina rättigheter så kan du kontakta oss på följande adress:</span></p>\n<p><span style=\"color: #999999;\">FORDONSBOLAGET AB</span><br />\n<span style=\"color: #999999;\">RÅBÄCKSVÄGEN 1</span><br />\n<span style=\"color: #999999;\">194 65 UPPLANDS VÄSBY</span><br />\n<span style=\"color: #999999;\">E-mail: aksel.sveen@fordonsbolaget.se</span></p>\n<p>This site is protected by reCAPTCHA and the Google<br />\n<a href=\"https://policies.google.com/privacy\">Privacy Policy</a> and<br />\n<a href=\"https://policies.google.com/terms\">Terms of Service</a> apply.</p>\n"
+  },
+  "newsletter": {
+    "title": "FÅ VÅRT NYHETSBREV",
+    "subtitle": "Fyll i din mailadress och få våra spännande nyheter",
+    "input_placeholder": "Skriv din epost",
+    "button_text": "Prenumerera",
+    "alert_title": "Tack för din prenumeration!"
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  },
+  "default_car_image": {
+    "url": "https://cdn.shopify.com/s/files/1/0274/1202/9492/products/IMG_20200529_163000_1024x1024.jpg?v=1590720000",
+    "alt": "Bamboo Toothbrush"
+  }
+}

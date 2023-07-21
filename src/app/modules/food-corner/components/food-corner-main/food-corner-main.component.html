@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="header-content">
+    <div class="row justify-content-center">
+      <!--Search bar and cart -->
+      <div class="col-md-6 d-flex">
+        <div class="input-group mb-5 me-2">
+          <input #searchBar
+                 type="text"
+                 class="form-control"
+                 (keyup.enter)="onSearchClick(searchBar.value)"
+                 placeholder="Type something...">
+          <button class="btn btn-outline-secondary"
+                  (click)="onSearchClick(searchBar.value)"
+                  type="button">Search
+          </button>
+        </div>
+        <div [routerLink]="'cart'"
+             (click)="cartItemsToStorage()"
+             class="cm-wishlist">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{ this.foodCornerService.getWishlistItemsValue().length }}
+          </span>
+          <i class="bi bi-heart cm-wishlist-icon"></i>
+        </div>
+      </div>
+    </div>
+    <!--Category badges-->
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <ul class="d-flex justify-content-center flex-wrap p-0">
+          <li (click)="onSearchClick('breakfast')"
+              class="cm-badge">Breakfast
+          </li>
+          <li (click)="onSearchClick('appetizer')"
+              class="cm-badge">Appetizer
+          </li>
+          <li (click)="onSearchClick('main course')"
+              class="cm-badge">Main course
+          </li>
+          <li (click)="onSearchClick('lunch')"
+              class="cm-badge">Lunch
+          </li>
+          <li (click)="onSearchClick('side dish')"
+              class="cm-badge">Side dish
+          </li>
+          <li (click)="onSearchClick('fry')"
+              class="cm-badge">Fry
+          </li>
+          <li (click)="onSearchClick('soup')"
+              class="cm-badge">Soup
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--Recipes list-->
+  <div class="cm-recipes-content">
+    <div *ngFor="let recipe of recipes"
+         class="cm-recipe mb-3">
+      <div class="card">
+        <img [src]="recipe.image"
+             class="cm-card-img img-fluid"
+             alt="...">
+        <div class="card-body">
+          <h5 class="card-title cm-item-title">{{ recipe.title }}</h5>
+          <a href="#"
+             [routerLink]="'/food-corner/detail/' + recipe.id"
+             (click)="onRecipeDetailClick(recipe.id)"
+             class="btn cm-main-button">Details</a>
+          <button (click)="onCartClick(recipe)"
+                  class="cm-wishlist-btn border-0">
+            <i [ngClass]="{'bi bi-check-lg': recipe.selected,
+            'bi bi-bookmark-heart-fill cm-to-wishlist-icon': !recipe.selected}"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

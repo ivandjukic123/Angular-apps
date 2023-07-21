@@ -1,0 +1,91 @@
+{
+  "intro": {
+    "title_before": "Välkommen till",
+    "title": "FORDONSBOLAGET",
+    "text": "<p>Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att du ska känna att du gjort en bra affär. Att investera i ett nytt fordon klassas som en stor händelse för de flesta människor. Så stort att de flesta enbart upplever bostadsköp som en större och viktigare affär. Efter flera år i branschen och åtskilliga tusen bilar sålda kan du känna dig trygg när du köper, säljer eller reparerar din bil hos oss. Vi jobbar dagligen med att du ska få den absolut bästa upplevelsen hos oss. Vi växer konstant och har sedan starten 2012 blivit över 25 duktiga och drivna medarbetare. Följ med oss på vår resa!</p>\n"
+  },
+  "services": [
+    {
+      "icon": "fa-regular fa-cart-shopping",
+      "title": "BEGAGNADE PREMIUMBILAR",
+      "text": "<p>Vi erbjuder ett brett utbud av begagnade premiumbilar från många välkända biltillverkare.</p>\n"
+    }
+  ],
+  "slider_and_content": {
+    "slider": [
+      {
+        "image": {
+          "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/4F7A2092-e1539261211149.jpg",
+          "alt": "Kevin och Danny"
+        }
+      }
+    ],
+    "content": "<p>Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att du ska känna att du gjort en bra affär. Att investera i ett nytt fordon klassas som en stor händelse för de flesta människor. Så stort att de flesta enbart upplever bostadsköp som en större och viktigare affär. Efter flera år i branschen och åtskilliga tusen bilar sålda kan du känna dig trygg när du köper, säljer eller reparerar din bil hos oss. Vi jobbar dagligen med att du ska få den absolut bästa upplevelsen hos oss. Vi växer konstant och har sedan starten 2012 blivit över 25 duktiga och drivna medarbetare. Följ med oss på vår resa!</p>\n"
+  },
+  "history": {
+    "title": "Vår historia",
+    "boxes": [
+      {
+        "content": "<p>2012 startade Kevin Aslan och Danny Attar verksamheten på Stockholmsvägen. Målet var att driva en verksamhet som var modernare och mer digital än den traditionella bilhandeln. Med stark tillväxt skickligt entreprenörskap och en glödande drivkraft kunde man 2014 anställa sin första medarbetare. Det var nu dags att expandera.</p>\n",
+        "title": "Starten",
+        "year": "2012"
+      }
+    ]
+  },
+  "our_values": {
+    "title": "Våra värderingar",
+    "points": [
+      {
+        "title": "Uppdrag #1",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ],
+    "boxes": [
+      {
+        "background_color": null,
+        "background_image": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2019/05/detail-intro-bg.75e40f77feca72df1086-1024x538-768x404.jpg",
+        "color": "#ffffff",
+        "inner_boxes": [
+          {
+            "background_color": "#fc3135",
+            "background_image": null,
+            "color": "#ffffff",
+            "title": "Sveriges modernaste bilhandel"
+          }
+        ],
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "title": "Vad vi brinner för Vi revolutionerar bilhandeln i Sverige"
+      }
+    ]
+  },
+  "banner": {
+    "image": {
+      "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+      "alt": "Fordonsbolaget"
+    },
+    "title": "Få Ett Bud På Din Snabbt Och Smidigt",
+    "text": "",
+    "button": {
+      "text": "",
+      "link": "",
+      "position": "right"
+    }
+  },
+  "newsletter": {
+    "title": "FÅ VÅRT NYHETSBREV",
+    "subtitle": "Fyll i din mailadress och få våra spännande nyheter",
+    "input_placeholder": "Skriv din epost",
+    "button_text": "Prenumerera",
+    "alert_title": "Tack för din prenumeration!"
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  }
+}

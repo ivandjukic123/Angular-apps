@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="row my-5">
+    <div class="col">
+      <input [(ngModel)]="todoTitle"
+             type="text"
+             class="form-control"
+             placeholder="Enter Todo text"
+             name="text">
+    </div>
+    <div class="col-auto">
+      <button type="submit"
+              class="btn btn-primary">
+        Submit
+      </button>
+    </div>
+    <!--this should be rendered here as array of todos, not single component-->
+    <!--and we should pass input to it-->
+  </div>
+</form>

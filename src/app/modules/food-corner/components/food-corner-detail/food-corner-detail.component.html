@@ -1,0 +1,66 @@
+<div class="container py-3">
+  <div class="cm-heading d-flex justify-content-between mb-5">
+    <div [routerLink]="'food-corner'"
+         (click)="toMainPage()"
+         class="cm-back-button">
+      <i class="bi bi-arrow-left-circle cm-back-icon"></i>
+    </div>
+    <h3>Detail page</h3>
+  </div>
+  <div class="row">
+    <!--Spinner-->
+    <div *ngIf="!(recipeInfo$ | async)"
+         class="col-12 d-flex justify-content-center">
+      <div class="spinner-border text-primary"
+           role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <!--Detail image-->
+    <div *ngIf="(recipeInfo$ | async) as recipeInfo"
+         class="col-md-6 d-flex justify-content-center">
+      <img [src]="recipeInfo?.image ? recipeInfo?.image : noResponseImg"
+           class="img-fluid cm-detail-img mb-3"
+           alt="">
+    </div>
+    <div *ngIf="(recipeInfo$ | async) as recipeInfo"
+         class="col-md-6">
+      <h2 class="mb-2">{{ recipeInfo?.title}}</h2>
+      <!--Recipe info badges-->
+      <ul class="cm-detail-list">
+        <li class="cm-detail-item"
+            *ngIf="recipeInfo?.vegetarian">Vegetarian
+        </li>
+        <li class="cm-detail-item"
+            *ngIf="recipeInfo?.vegan">Vegan
+        </li>
+        <li class="cm-detail-item"
+            *ngIf="recipeInfo?.glutenFree">Gluten free
+        </li>
+        <li class="cm-detail-item"
+            *ngIf="recipeInfo?.dairyFree">Dairy free
+        </li>
+        <li class="cm-detail-item"
+            *ngIf="recipeInfo?.veryHealthy">Very healthy
+        </li>
+        <li class="cm-detail-item"
+            *ngIf="recipeInfo?.veryPopular">Very popular
+        </li>
+        <li class="cm-detail-item"
+            *ngIf="recipeInfo?.cheap">Cheap
+        </li>
+      </ul>
+      <p class="mb-5"
+         [innerHTML]="recipeInfo?.summary"></p>
+      <button (click)="onAddToCart(recipeInfo)"
+              class="btn btn-primary cm-cart-button mb-3">Add to wishlist
+      </button>
+      <ngb-alert #cartAlert
+                 *ngIf="successCartMessage"
+                 type="custom"
+                 (closed)="successCartMessage = ''">
+        {{ successCartMessage }}
+      </ngb-alert>
+    </div>
+  </div>
+</div>

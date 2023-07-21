@@ -1,0 +1,98 @@
+<div class="card mb-4">
+  <div class="card-header">
+    {{ post.title }}
+  </div>
+  <div class="card-body">
+    <p class="small">{{ post.body }}</p>
+    <button class="btn btn-link btn-sm mb-3"
+            (click)="loadAuthorByPostId(post.id, authorModalRef)">
+      View author
+    </button>
+    <button class="btn btn-link btn-sm mb-3"
+            (click)="loadCommentsByPostId(post.id, commentsModalRef)">
+      View comments
+    </button>
+    <br>
+    <!--Added [ngClass] here to display primary color badge to all default badges-->
+    <!--But if we have selectedTag and it's equal to tag we color it green so we know by which tag it's filtered-->
+    <span class="badge mx-1 c-pointer"
+          [ngClass]="tag === dummyService.selectedTag ? 'bg-success' : 'bg-primary'"
+          *ngFor="let tag of post.tags"
+          (click)="onTagClick(tag)">
+      {{ tag }}
+    </span>
+  </div>
+</div>
+
+<!-- author modal-->
+<ng-template #authorModalRef
+             let-modal>
+  <div>
+    <div class="modal-header">
+      <h4 class="modal-title">{{ 'Author Modal' }}</h4>
+      <button type="button"
+              class="btn-close"
+              (click)="modal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <!--check if author exists, before we use it's properties below like author.email etc...-->
+      <div *ngIf="isLoading">
+        <h3 class="text-center">Loading...</h3>
+      </div>
+      <div *ngIf="author && !isLoading"
+           class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img [src]="author.image"
+                 class="img-fluid author-img"
+                 alt="author logo">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title ps-3">Author info</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name: {{ author.firstName }} {{ author.lastName }}</li>
+                <li class="list-group-item">Email: {{ author.email }}</li>
+                <li class="list-group-item">Phone: {{ author.phone }}</li>
+                <li class="list-group-item">Age: {{ author.age }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button"
+              class="btn btn-light btn-sm"
+              (click)="modal.close()">
+        Close
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<!--comments modal-->
+<ng-template #commentsModalRef
+             let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">{{ 'Comments Modal' }}</h4>
+    <button type="button"
+            class="btn-close"
+            (click)="modal.close()"></button>
+  </div>
+  <div class="modal-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"
+          *ngFor="let comment of comments">
+        {{ comment.id }} - {{ comment.body }} - {{ comment.user.username}}
+      </li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button type="button"
+            class="btn btn-light btn-sm"
+            (click)="modal.close()">
+      Close
+    </button>
+  </div>
+</ng-template>

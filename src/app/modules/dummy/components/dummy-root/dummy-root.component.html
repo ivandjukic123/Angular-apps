@@ -1,0 +1,96 @@
+<!--
+<p>dummy-root works!</p>
+<p>todos {{ todos.length }}</p>
+<p>todos1 {{ todos1.length }}</p>
+<p>todos2 {{ todos2.length }}</p>
+<p>todos3 {{ todos3.length }}</p>
+<p>todos4 {{ todos4.length }}</p>
+<p>todos$ {{ (todos$ | async)?.length }}</p>
+-->
+<!--
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      code a card here, and only show it if user is selected(user variable exists)! (hint *ngIf)
+      <div class="card"
+           *ngIf="singleUser">
+        <div class="card-body">
+          bind it to img [src] property better
+          <img class="card-img-top"
+               [src]="singleUser.image"
+               alt="Card image cap">
+          <h5 class="card-title">Name: {{ singleUser.firstName }}</h5>
+          <p class="card-text">Email: {{ singleUser.email }}</p>
+          <p class="card-text">Phone: {{ singleUser.phone }}</p>
+          <p class="card-text">Address: {{ singleUser.address.address }}</p>
+          <p class="card-text">Blood group: {{ singleUser.bloodGroup }}</p>
+          <p class="card-text">Height: {{ singleUser.height }}</p>
+          <p class="card-text">Weight: {{ singleUser.weight }}</p>
+          <p class="card-text">Hair color: {{ singleUser.hair.color }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div *ngFor="let user of users"
+         class="col-md-3">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
+          <p class="card-text">{{ user.email }}</p>
+          here we can pass full user, or only id, depends what we want in onUserSelect method
+          <a (click)="onUserSelect(user)"
+             class="btn btn-sm btn-primary">{{ 'View' }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="bg-light p-3 mb-3 border rounded">
+        Filter by tag:
+        <ng-container *ngIf="dummyService.selectedTag">
+          <span class="badge bg-success">
+            {{ dummyService.selectedTag }}
+          </span>
+          <!--unicode &#10005; = X-->
+          <span class="badge bg-danger ms-2 c-pointer"
+                (click)="clearSelectedTag()"
+                placement="auto"
+                ngbTooltip="Clear tag">&#10005;</span>
+        </ng-container>
+        <div ngbDropdown
+             class="d-inline-block mx-3">
+          <button type="button"
+                  class="btn btn-secondary"
+                  ngbDropdownToggle>
+            Select posts number
+          </button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem
+                    *ngFor="let option of postFilterOptions"
+                    (click)="onOptionSelect(option)">
+              {{ option }}
+            </button>
+          </div>
+        </div>
+        Post number per API call: {{ dummyService.postHttpParams.limit }}
+      </div>
+      <app-dummy-post *ngFor="let post of posts | filterByTag:dummyService.selectedTag"
+                      [post]="post">
+      </app-dummy-post>
+      <div class="text-center"
+           *ngIf="!(dummyService.postHttpParams.skip + dummyService.postHttpParams.limit === dummyService.postHttpParams.total + dummyService.postHttpParams.limit)">
+        <button type="button"
+                class="btn btn-primary"
+                (click)="loadMorePosts()">Load more posts
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

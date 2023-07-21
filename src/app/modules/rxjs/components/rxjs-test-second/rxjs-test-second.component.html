@@ -1,0 +1,16 @@
+<div class="container">
+  <button class="btn btn-outline-secondary mb-3"
+          [routerLink]="'/rxjs/third'"
+          type="button">Third page
+  </button>
+  <div class="row">
+    <div *ngFor="let product of products"
+         class="col-md-2">
+      <div class="card">
+        <img [src]="product.thumbnail"
+             class="card-img-top"
+             alt="...">
+      </div>
+    </div>
+  </div>
+</div>

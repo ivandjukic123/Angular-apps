@@ -1,0 +1,40 @@
+<div class="container py-3">
+  <div class="cm-heading d-flex justify-content-between mb-5">
+    <div [routerLink]="'food-corner'"
+         (click)="toMainPage()"
+         class="cm-back-button">
+      <i class="bi bi-arrow-left-circle cm-back-icon"></i>
+    </div>
+    <h3>Wishlist</h3>
+  </div>
+  <div class="row">
+    <!--Product list-->
+    <div class="col-md-6">
+      <ng-container *ngIf="(wishlistRecipes$ | async)?.length === 0">
+        <h3 class="mt-5 cm-empty-state__title">Nothing in wishlist...</h3>
+      </ng-container>
+      <div class="cm-cart-list mb-5">
+        <div *ngFor="let recipe of wishlistRecipes$ | async"
+             class="cm-cart-item-wrapper">
+          <div class="cm-cart-item me-4">
+            <div class="d-flex align-items-center">
+              <img class="img-fluid cm-product-image me-3"
+                   [src]="recipe.image ? recipe.image : noResponseImg"
+                   alt="recipe image">
+              <p>{{ recipe.title }}</p>
+            </div>
+            <div class="d-flex">
+              <p>{{ recipe.price }}</p>
+            </div>
+          </div>
+          <i (click)="onDelete(recipe)"
+             class="bi bi-trash3 cm-trash-icon"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 cm-cart-summary">
+
+    </div>
+  </div>
+</div>

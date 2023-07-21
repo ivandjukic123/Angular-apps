@@ -1,0 +1,27 @@
+.block {
+  background: #f9f9fb;
+  border-radius: 30px;
+}
+
+.cm-bg-block {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: deepskyblue;
+}
+
+.cm-form-block {
+  padding-right: 5rem !important;
+  padding-left: 5rem !important;
+}
+
+form {
+  max-width: 600px;
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+}

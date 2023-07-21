@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="d-flex justify-content-center mb-4">
+    <input type="text"
+           class="form-control me-2"
+           [ngModel]="searchTerm"
+           (ngModelChange)="onSearchClick($event)"
+           placeholder="Type something...">
+    <button class="btn btn-outline-secondary me-2"
+            (click)="onSearchClick($event)"
+            type="button">Search
+    </button>
+    <button class="btn btn-outline-success me-2"
+            (click)="onFetchClick()"
+            type="button">Fetch ids
+    </button>
+    <button class="btn btn-outline-secondary"
+            [routerLink]="'second'"
+            type="button">Second page
+    </button>
+  </div>
+  <h5 *ngIf="displayText">Void</h5>
+  <div class="row">
+    <div *ngFor="let product of products"
+         class="col-md-2">
+      <p class="c-pointer"
+         (click)="onDetailClick(imageModalRef, product.id); currentProduct(product)">{{ product.title }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let product of dummyProducts$ | async"
+         class="col-md-2">
+      <div class="card">
+        <p>{{ product.id }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="(currentProduct$ | async) as currentProduct"
+       class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ currentProduct.title }}</h5>
+      <p class="card-text">{{ currentProduct.category }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #imageModalRef
+             let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Detail image</h4>
+    <button type="button"
+            class="btn-close"
+            (click)="modal.close()"></button>
+  </div>
+  <div class="modal-body">
+    <!--    The async pipe subscribes to the details$ and returns the latest
+    value emitted by the Observable. When a new value is emitted,
+    the async pipe updates the src attribute-->
+    <img [src]="(details$ | async)?.thumbnail"
+         class="img-fluid"
+         alt="">
+  </div>
+</ng-template>

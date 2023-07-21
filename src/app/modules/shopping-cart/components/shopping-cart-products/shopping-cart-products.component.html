@@ -1,0 +1,360 @@
+<div class="header-content">
+  <div class="row justify-content-center">
+    <div class="col-md-6 d-flex">
+      <div class="input-group mb-5 me-2">
+        <ng-select [items]="records.pageRecords"
+                   [(ngModel)]="records.selectedRecord"
+                   (change)="onSelectedRecord()"
+                   [clearable]="false"
+                   placeholder="Records per page"
+                   class="me-2 cm-record-select"
+                   name="records">
+        </ng-select>
+        <input #searchBar
+               type="text"
+               class="form-control"
+               (keyup.enter)="onSearchClick(searchBar.value)"
+               placeholder="Type something...">
+        <button class="btn btn-outline-secondary"
+                (click)="onSearchClick(searchBar.value)"
+                type="button">Search
+        </button>
+      </div>
+      <div (click)="openCartModal(cartModalRef)"
+           class="cm-shopping-cart">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {{ this.shoppingCartService.getCartProducts().length }}
+        </span>
+        <i class="bi bi-cart3 cm-cart-icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cm-product-content">
+  <div *ngFor="let product of products; let i = index"
+       class="cm-product mb-3">
+    <div class="card">
+      <img [src]="product.thumbnail"
+           class="cm-card-img img-fluid"
+           (click)="openDetailModal(product.id, detailModalRef)"
+           alt="...">
+      <div class="card-body">
+        <div class="d-flex justify-content-between mb-2">
+          <h5 class="card-title cm-item-title">{{ product.title }}</h5>
+          <p>Stock: {{ product.stock }}</p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <p>{{ product.price | currency:'EUR' }}</p>
+          <button class="cm-cart border-0"
+                  (click)="onCartClick(product)">
+            <i class="bi bi-cart-plus cm-cart-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center">
+  <ngb-pagination [collectionSize]="pagination.total"
+                  [pageSize]="pagination.limit"
+                  [(page)]="pagination.page"
+                  (pageChange)="onPageSelect($event)"></ngb-pagination>
+</div>
+
+<!--Ngb modal Detail-->
+<ng-template #detailModalRef>
+  <div class="modal-header">
+    <h4 class="modal-title">Details</h4>
+    <button type="button"
+            class="btn-close"
+            (click)="onDetailModalClose()"></button>
+  </div>
+  <div class="modal-body d-flex justify-content-center">
+    <div *ngIf="isLoading"
+         class="spinner-border"
+         role="status">
+    </div>
+    <div *ngIf="!isLoading">
+      <h4>{{ details.title }}</h4>
+      <img [src]="details.thumbnail"
+           alt=""
+           class="img-fluid">
+      <p>{{ details.description }}</p>
+      <div class="row">
+        <div class="col-6 col-lg-2">
+          <p>Price:</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>{{ details.price | currency:'EUR' }}</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>Rating:</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>{{ details.rating }}</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>Stock:</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>{{ details.stock }}</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>Brand:</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>{{ details.brand }}</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>Category:</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <p>{{ details.category }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!--Ngb modal Cart-->
+<ng-template #cartModalRef
+             let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title me-2">Cart</h4>
+    <i class="bi bi-cart4 cm-cart-icon"></i>
+    <button type="button"
+            class="btn-close"
+            (click)="onCartModalClose(modal)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <!--Product list-->
+      <div class="col-md-6">
+        <ng-container *ngIf="shoppingCartService.getCartProducts().length === 0">
+          <h3 class="mt-5 cm-empty-state__title">Nothing in the cart...</h3>
+        </ng-container>
+        <div class="cm-cart-list mb-5">
+          <div *ngFor="let product of shoppingCartService.getCartProducts(); let i = index"
+               class="cm-cart-item-wrapper">
+            <div class="cm-cart-item me-4">
+              <div class="d-flex flex-column align-items-center">
+                <img class="img-fluid cm-product-image me-3"
+                     [src]="product.thumbnail"
+                     alt="product image">
+                <p>{{ product.title }}</p>
+              </div>
+              <div class="d-flex flex-column">
+                <p>{{ product.price * product.quantity | currency: 'EUR' }}</p>
+                <input type="number"
+                       [(ngModel)]="product.quantity"
+                       class="form-control cm-quantity-input"
+                       min="1"
+                       max="{{ product.stock }}"
+                       placeholder="1"
+                       [value]="product.quantity"
+                       (ngModelChange)="onQuantityChange()">
+              </div>
+            </div>
+            <i (click)="onDelete(product)"
+               class="bi bi-trash3 cm-trash-icon"></i>
+          </div>
+        </div>
+      </div>
+      <!--Order summary-->
+      <div class="col-md-6">
+        <div class="cm-cart-summary">
+          <div class="cm-cart-summary-item mb-3">
+            <div class="d-flex">
+            <h4 class="me-2">Subtotal</h4>
+            <i class="bi bi-cash cm-cart-icon"></i>
+            </div>
+            <p>{{ prices.subtotalPrice | currency: 'EUR'}}</p>
+          </div>
+          <div class="cm-cart-summary-item mb-3">
+            <h4>Delivery</h4>
+            <p>{{ '$12' }}</p>
+          </div>
+          <div class="cm-cart-summary-item mb-3">
+            <div class="d-flex">
+              <h4 class="me-2">Total</h4>
+              <i class="bi bi-cash-stack cm-cart-icon"></i>
+            </div>
+            <p>{{ (prices.subtotalPrice + prices.deliveryPrice) | currency: 'EUR'}}</p>
+          </div>
+          <div class="">
+            <button (click)="onCheckoutButton(checkoutModalRef)"
+                    class="btn btn-primary">Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!--Ngb modal Checkout-->
+<ng-template #checkoutModalRef
+             let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title me-2">Checkout</h4>
+    <i class="bi bi-bag-check cm-cart-icon"></i>
+    <button type="button"
+            class="btn-close"
+            (click)="onCheckoutClose(modal)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-7">
+        <form [formGroup]="showCheckoutForm"
+              (ngSubmit)="onCheckoutSubmit()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="name"
+                       class="mb-1">Name</label>
+                <input type="text"
+                       class="form-control mb-2"
+                       id="name"
+                       placeholder="John"
+                       formControlName="name">
+                <small *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+                       class="form-text text-danger mb-1">
+                  <ng-container *ngIf="name?.errors?.['required']">
+                    Name is required
+                  </ng-container>
+                  <ng-container *ngIf="name?.errors?.['pattern']">
+                    There must be letters.
+                  </ng-container>
+                </small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="surname"
+                       class="mb-1">Surname</label>
+                <input type="text"
+                       class="form-control mb-2"
+                       id="surname"
+                       placeholder="Doe"
+                       formControlName="surname">
+                <small *ngIf="surname?.invalid && (surname?.dirty || surname?.touched)"
+                       class="form-text text-danger mb-1">
+                  <ng-container *ngIf="surname?.errors?.['required']">
+                    Surname is required
+                  </ng-container>
+                  <ng-container *ngIf="surname?.errors?.['pattern']">
+                    There must be letters.
+                  </ng-container>
+                </small>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group mb-3">
+                <label for="address"
+                       class="mb-1">Address</label>
+                <input type="text"
+                       class="form-control mb-2"
+                       id="address"
+                       placeholder="Street 1"
+                       formControlName="address">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group mb-3">
+                <label for="email"
+                       class="mb-1">Email</label>
+                <input type="text"
+                       class="form-control mb-2"
+                       id="email"
+                       placeholder="somebody@test.me"
+                       formControlName="email">
+                <small *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+                       class="form-text text-danger mb-1">
+                  <ng-container *ngIf="email.errors?.['required']">
+                    Email is required
+                  </ng-container>
+                </small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="phone"
+                       class="mb-1">Phone</label>
+                <input type="phone"
+                       class="form-control mb-2"
+                       id="phone"
+                       formControlName="phone">
+                <small *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)"
+                       class="form-text text-danger mb-1">
+                  <ng-container *ngIf="phone?.errors?.['pattern']">
+                    Only “+” sign and numbers 0-9 allowed
+                  </ng-container>
+                </small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="owner"
+                       class="mb-1">Account owner</label>
+                <input type="text"
+                       class="form-control mb-2"
+                       id="owner"
+                       formControlName="owner">
+                <small *ngIf="owner?.invalid && (owner?.dirty || owner?.touched)"
+                       class="form-text text-danger mb-1">
+                  <ng-container *ngIf="owner?.errors?.['pattern']">
+                    There must be letters.
+                  </ng-container>
+                </small>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group mt-3 mb-3">
+                <button type="submit"
+                        class="btn btn-success">Submit
+                  <span *ngIf="formLoader"
+                       class="spinner-border cm-spinner ms-2"
+                       role="status">
+                  </span>
+                </button>
+              </div>
+              <ngb-alert #successAlert
+                         type="success"
+                         *ngIf="checkoutAlert"
+                         (closed)="checkoutAlert = false">
+                {{ 'Success!' }}
+              </ngb-alert>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-5">
+        <div class="cm-cart-list mb-5">
+          <div *ngFor="let product of shoppingCartService.getCartProducts(); let i = index"
+               class="cm-cart-item-wrapper">
+            <div class="cm-cart-item position-relative me-4">
+              <i class="bi bi-check-circle-fill cm-check-circle"></i>
+              <div class="d-flex flex-column align-items-center">
+                <img class="img-fluid cm-product-image me-3"
+                     [src]="product.thumbnail"
+                     alt="product image">
+                <p>{{ product.title }}</p>
+              </div>
+              <div class="d-flex flex-column">
+                <p>{{ product.price * product.quantity | currency: 'EUR' }}</p>
+                <input type="number"
+                       class="form-control cm-quantity-input"
+                       min="1"
+                       max="{{ product.stock }}"
+                       [value]="product.quantity"
+                       placeholder="1"
+                       [(ngModel)]="product.quantity"
+                       (ngModelChange)="onQuantityChange()">
+              </div>
+            </div>
+            <i (click)="onDelete(product)"
+               class="bi bi-trash3 cm-trash-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

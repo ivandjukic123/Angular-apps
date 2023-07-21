@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let product of products"
+         class="col-md-2">
+      <div class="card">
+        <p>{{ product.id }}</p>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-outline-secondary mt-3"
+          (click)="onUpdateButtonClick()"
+          type="button">Update stream
+  </button>
+</div>

@@ -1,0 +1,92 @@
+<form #form="ngForm"
+      (submit)="onSubmit(form)">
+  <h5>Sell your car (TD)</h5>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label for="regNo">Reg number*</label>
+        <input #regNo="ngModel"
+               type="text"
+               class="form-control"
+               name="regNo"
+               id="regNo"
+               pattern="^[A-Z]{3}[0-9]{2}[A-Z-0-9]{1}$"
+               [ngClass]="{'input-error': regNo.invalid && (regNo.touched || submitted)}"
+               [(ngModel)]="model.regNo"
+               required>
+        <span *ngIf="(regNo.invalid && regNo.touched) || (regNo.invalid && submitted)"
+              class="text-danger small">Invalid registration number</span>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label for="mileage">Mileage*</label>
+        <input #mileage="ngModel"
+               type="number"
+               class="form-control"
+               name="mileage"
+               id="mileage"
+               [ngClass]="{'input-error': (mileage.invalid && mileage.touched) || (mileage.invalid && submitted)}"
+               [ngModel]="model.mileage"
+               (ngModelChange)="model.mileage = $event"
+               required>
+        <span *ngIf="(mileage.invalid && mileage.touched) || (mileage.invalid && submitted)"
+              class="text-danger small">Invalid mileage</span>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label for="email">E-mail*</label>
+        <input #email="ngModel"
+               type="email"
+               class="form-control"
+               name="email"
+               [email]="true"
+               id="email"
+               [ngClass]="{'input-error': (email.invalid && email.touched) || (email.invalid && submitted)}"
+               ngModel
+               required>
+        <span *ngIf="(email.invalid && email.touched) || (email.invalid && submitted)"
+              class="text-danger small">Invalid email</span>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input #phoneRef
+               type="phone"
+               class="form-control"
+               name="phone"
+               id="phone">
+      </div>
+    </div>
+    <div class="col-12 mb-3">
+      <div class="form-check">
+        <input #checker="ngModel"
+               type="checkbox"
+               class="form-check-input"
+               name="acceptedGdprConsent"
+               id="checkbox"
+               [ngClass]="{'input-error': checker.invalid && checker.touched} "
+               [(ngModel)]="model.acceptedGdprConsent"
+               required>
+        <label class="form-check-label"
+               for="checkbox">
+          I agree that my information is handled in accordance with the applicable <a href="#">privacy policy.</a>
+        </label>
+      </div>
+      <span *ngIf="(checker.invalid && checker.touched) || (checker.invalid && submitted)"
+            class="text-danger small">Checkbox required.</span>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <button type="submit"
+                class="btn btn-success">
+          Send for valuation
+          <span [hidden]="!loading"
+                class="cm-spinner"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

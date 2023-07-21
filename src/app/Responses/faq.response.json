@@ -1,0 +1,49 @@
+{
+  "banner": {
+    "image": {
+      "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+      "alt": "Fordonsbolaget"
+    },
+    "title": "Få Ett Bud På Din Snabbt Och Smidigt",
+    "text": "",
+    "button": {
+      "text": "",
+      "link": "",
+      "position": "right"
+    }
+  },
+  "faq": {
+    "title": "Här hittar du svar på vanlig frågor",
+    "all_faq": [
+      {
+        "all_questions": [
+          {
+            "id": 1212,
+            "question": "Vad är Fordonsbolaget?",
+            "question_slug": "vad-ar-fordonsbolaget",
+            "answer": "Fordonsbolaget är en digital marknadsplats där du som privatperson kan sälja din bil till ett auktoriserat bilföretag. Vi har samlat alla bilföretag på ett och samma ställe för att göra det enklare för dig som säljer din bil. Du får ett bud på din bil direkt och kan sedan välja att sälja din bil till det företag som du tycker är bäst."
+          }
+        ],
+        "category": "Köpa bil",
+        "category_slug": "kopa-bil"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "FÅ VÅRT NYHETSBREV",
+    "subtitle": "Fyll i din mailadress och få våra spännande nyheter",
+    "input_placeholder": "Skriv din epost",
+    "button_text": "Prenumerera",
+    "alert_title": "Tack för din prenumeration!"
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  }
+}

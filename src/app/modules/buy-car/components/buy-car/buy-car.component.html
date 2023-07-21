@@ -1,0 +1,106 @@
+<div class="row"
+     *ngIf="car">
+  <div class="col-md-8">
+    <h3>{{ car.make }} {{ car.model }}</h3>
+    <img [src]="car.images[0]"
+         class="img-fluid"
+         alt="car image">
+    <ul class="list-unstyled d-flex justify-content-between flex-wrap">
+      <li>
+        <span>Year: </span>
+        <span>{{ car.yearModel }}</span>
+      </li>
+      <li>
+        <span>Mileage: </span>
+        <span>{{ car.mileage }}</span>
+      </li>
+      <li>
+        <span>Gear: </span>
+        <span>{{ car.gearBoxType }}</span>
+      </li>
+      <li>
+        <span>Fuel: </span>
+        <span>{{ car.fuelType }}</span>
+      </li>
+      <li>
+        <span>Color: </span>
+        <span>{{ car.color }}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <h4>Purchaser</h4>
+    <div class="bg-secondary">
+      <p>
+        This is purchase section
+      </p>
+    </div>
+  </div>
+  <div class="col-12 col-md-8">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-3">Specification</h4>
+      </div>
+      <div class="col-6 col-md-4 mb-4 d-flex flex-column">
+        <span>Year: </span>
+        <span>{{ car.yearModel }}</span>
+      </div>
+      <div class="col-6 col-md-4 mb-4 d-flex flex-column">
+        <span>Mileage: </span>
+        <span>{{ car.mileage }}</span>
+      </div>
+      <div class="col-6 col-md-4 mb-4 d-flex flex-column">
+        <span>Gear: </span>
+        <span>{{ car.gearBoxType }}</span>
+      </div>
+      <div class="col-6 col-md-4 mb-4 d-flex flex-column ">
+        <span>Fuel: </span>
+        <span>{{ car.fuelType }}</span>
+      </div>
+      <div class="col-6 col-md-4 mb-4 d-flex flex-column">
+        <span>Color: </span>
+        <span>{{ car.color }}</span>
+      </div>
+      <div class="col-6 col-md-4 mb-4 d-flex flex-column">
+        <span>Reg number: </span>
+        <span>{{ car.regNo }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <h3>08 - 322 900</h3>
+    <p>Fell free to call us with your question</p>
+  </div>
+  <div class="col-12">
+    <h4>Similar cars</h4>
+  </div>
+  <div class="col-md-4"
+       *ngFor="let car of car.similarCars">
+    <div class="card mb-3">
+      <div class="card-body">
+        <a class="cm-vehicle-image mb-3"
+           *ngFor="let image of car.images"
+           [ngStyle]="{'background-image': 'url('+(image)+')','background-size': 'cover'}"></a>
+        <span class="badge bg-success mx-2 c-pointer">{{ car.make }} {{ car.model }}</span>
+        <span class="badge bg-success mx-2 c-pointer">{{ car.yearModel }}</span>
+        <span class="badge bg-success mx-2 c-pointer">{{ car.fuelType }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 mb-5">
+    <ul ngbNav
+        #nav="ngbNav"
+        (navChange)="onNavChange($event)"
+        [(activeId)]="carSlug"
+        class="nav-tabs">
+      <li [ngbNavItem]="car.slug"
+          *ngFor="let car of car.similarCars">
+        <a ngbNavLink>{{ car.make }}</a>
+        <ng-template ngbNavContent>
+          <p>{{ car.yearModel }} {{ car.fuelType }} - {{ car.regNo }}</p>
+        </ng-template>
+      </li>
+    </ul>
+    <div [ngbNavOutlet]="nav"></div>
+  </div>
+</div>

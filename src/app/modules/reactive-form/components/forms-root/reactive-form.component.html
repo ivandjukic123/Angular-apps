@@ -1,0 +1,108 @@
+<form [formGroup]="showInterestForm"
+      (ngSubmit)="onSubmit()">
+  <h4>Reactive Form</h4>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group mb-3">
+        <label for="name"
+               class="mb-1">Name</label>
+        <input type="text"
+               class="form-control mb-2"
+               id="name"
+               placeholder="Name"
+               formControlName="name">
+        <small *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+               class="form-text text-danger mb-1">
+          <ng-container *ngIf="name?.errors?.['required']">
+            Name is required
+          </ng-container>
+        </small>
+      </div>
+      <div class="form-group mb-3">
+        <label for="email"
+               class="mb-1">Email</label>
+        <input type="text"
+               class="form-control mb-2"
+               id="email"
+               placeholder="Email"
+               formControlName="email">
+        <small *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+               class="form-text text-danger mb-1">
+          <ng-container *ngIf="email.errors?.['required']">
+            Email is required
+          </ng-container>
+        </small>
+      </div>
+      <div class="form-group mb-3">
+        <label for="phone"
+               class="mb-1">Phone</label>
+        <input type="phone"
+               class="form-control mb-2"
+               id="phone"
+               placeholder="Phone"
+               formControlName="phone">
+      </div>
+      <div class="form-check mb-3">
+        <input type="checkbox"
+               class="form-check-input mb-2"
+               id="exchange"
+               formControlName="isExchange">
+        <label class="form-check-label mb-1 user-select-none"
+               for="exchange">
+          I have an exchange
+        </label>
+      </div>
+      <div class="row form-group mb-3"
+           *ngIf="isExchange.value">
+        <div class="col-md-6">
+          <label for="exchangeMileage"
+                 class="mb-1">Mileage</label>
+          <input class="form-control mb-2"
+                 id="exchangeMileage"
+                 formControlName="exchangeMileage"
+                 type="number">
+        </div>
+        <div class="col-md-6">
+          <label for="exchangeRegNo"
+                 class="mb-1">Reg number</label>
+          <input class="form-control mb-2"
+                 id="exchangeRegNo"
+                 formControlName="exchangeRegNo"
+                 type="text">
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="textarea"
+               class="mb-1">Message</label>
+        <textarea class="form-control mb-2"
+                  id="textarea"
+                  placeholder="Message"
+                  formControlName="comment"
+                  rows="4"></textarea>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               id="gdpr"
+               formControlName="acceptedGdprConsent">
+        <label class="form-check-label user-select-none"
+               for="gdpr">
+          I agree to with GDPR
+        </label>
+      </div>
+      <small *ngIf="acceptedGdprConsent?.invalid && (acceptedGdprConsent?.dirty || acceptedGdprConsent?.touched)"
+             class="form-text text-danger">
+        <ng-container *ngIf="acceptedGdprConsent?.errors?.['required']">
+          It is required.
+        </ng-container>
+      </small>
+      <div class="form-group mt-3">
+        <button type="submit"
+                class="btn btn-success">Send
+          <span [hidden]="!loading"
+                class="spinner mr-0 ml-2"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

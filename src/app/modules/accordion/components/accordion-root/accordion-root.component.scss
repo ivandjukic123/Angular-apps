@@ -1,0 +1,62 @@
+.cm-accordion-btn {
+  padding: 0.8rem 2rem;
+  border: 0;
+  color: #ffffff;
+  background-color: #e4644b;
+  width: 100%;
+  text-align: left;
+  display: block;
+  position: relative;
+
+  &.--opened:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 2rem;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #e4644b;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+}
+
+.cm-accordion-body {
+  margin: 0 -1.25rem;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    &::before {
+      content: '';
+      position: absolute;
+      width: .425rem;
+      left: -1px;
+      height: 100%;
+      background-color: #e4644b;
+    }
+  }
+}
+
+.nav-link {
+  color: #bdbdbd;
+  font-size: 0.75rem;
+  padding: 0.5rem 2rem;
+}
+
+.cm-button-group {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.cm-badge {
+  background-color: #494041;
+  color: #bdbdbd;
+  border-radius: 0.625rem;
+  padding-left: 0.725rem;
+  padding-right: 0.725rem;
+}

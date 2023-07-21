@@ -1,0 +1,102 @@
+<div class="cm-background"
+     *ngIf="weather"
+     [ngStyle]="{ 'background-image':
+     'url('+ backgroundImage +')'}">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="d-flex flex-wrap align-items-center cm-weather-data">
+        <span class="me-2 cm-temperature">{{ weather.current?.temp_c }}°</span>
+        <div class="d-flex flex-column me-3 text-center">
+          <span class="cm-location-name">{{ weather.location?.name ? weather.location?.name : 'No data for this city' }}</span>
+          <span>{{ weather.location?.localtime }}</span>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <img class="img-fluid cm-weather-icon"
+               [src]="weather.current?.condition?.icon"
+               alt="none">
+          <span>{{ weather.current?.condition?.text }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="cm-sidebar">
+        <div class="d-flex align-items-end cm-search-wrapper">
+          <input #searchBar
+                 #tooltip="ngbTooltip"
+                 type="text"
+                 class="form-control cm-search-bar me-2"
+                 (keyup.enter)="onSearchClick(searchBar.value, tooltip)"
+                 ngbTooltip="Search for a city"
+                 tooltipClass="cm-search-tooltip"
+                 placement="bottom"
+                 triggers="manual"
+                 placeholder="Search location...">
+          <button class="btn btn-outline-secondary cm-search-button"
+                  (click)="onSearchClick(searchBar.value, tooltip)"
+                  type="button">
+            <i class="bi bi-search cm-search-icon"></i>
+          </button>
+        </div>
+        <div class="cm-info-wrapper px-4">
+          <div class="cm-locations">
+            <ul class="cm-location-list py-4">
+              <li class="c-pointer cm-location-item"
+                  (click)="onSearchClick('Madrid')">Madrid
+              </li>
+              <li class="c-pointer cm-location-item"
+                  (click)="onSearchClick('Moscow')">Moscow
+              </li>
+              <li class="c-pointer cm-location-item"
+                  (click)="onSearchClick('Los angeles')">Los angeles
+              </li>
+              <li class="c-pointer cm-location-item"
+                  (click)="onSearchClick('Berane')">Berane
+              </li>
+            </ul>
+          </div>
+          <div class="cm-weather-details py-4">
+            <p class="mb-4">Weather details</p>
+            <div class="d-flex justify-content-between mb-3">
+              <span>Wind</span>
+              <span>{{ weather.current?.wind_kph ? weather.current?.wind_kph : '0' }} km/h</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span>Humidity</span>
+              <span>{{ weather.current?.humidity ? weather.current?.humidity : '0' }}%</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span>Feels like</span>
+              <span>{{ weather.current?.feelslike_c ? weather.current?.feelslike_c : '0' }}°</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span>Cloud</span>
+              <span>{{ weather.current?.cloud ? weather.current?.cloud : '0' }}</span>
+            </div>
+          </div>
+          <div class="cm-feather-forecast mb-3"
+               *ngIf="weather?.location">
+            <ngb-carousel [showNavigationIndicators]="false">
+              <ng-template ngbSlide
+                           *ngFor="let forecast of forecastHours">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                      <img class="img-fluid"
+                           [src]="forecast.condition?.icon"
+                           alt="weather icon">
+                      <div class="d-flex">
+                        <span class="me-2">{{ forecast.condition?.text }}</span>
+                        <span>{{ forecast.temp_c }}°</span>
+                      </div>
+                      <span>{{ forecast.time }}</span>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+/* Importing Ng Select CSS file. */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+/* Importing Bootstrap icons. */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.cm-spinner {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  margin: 0 5px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 2px solid white;
+  border-right-color: transparent !important;
+  background-color: transparent;
+  animation: spinner-animation 0.7s infinite linear;
+
+  &.--dark {
+    border-color: black;
+  }
+
+  &.--xl {
+    font-size: 1rem;
+  }
+
+  &.--xxl {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cm-invalid-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+ngb-accordion {
+  .accordion-item {
+    background-color: #494041;
+    color: #ffffff;
+    border-color: #e4644b;
+    border-bottom: 1px solid #dc482c;
+  }
+}
+
+ngb-pagination {
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .page-item {
+      .page-link {
+        background-color: white;
+        color: gray;
+        border: 1px solid #F0AF3C;
+        border-radius: 0.1875rem;
+        margin: 0 0.25rem 0.3rem 0;
+        font-size: 0.875rem;
+
+        &:hover {
+          background-color: darkgray;
+          color: white;
+        }
+      }
+
+      &.active {
+        .page-link {
+          background-color: #F0AF3C;
+          color: white;
+          border: 1px solid #F0AF3C;
+        }
+      }
+    }
+  }
+}
+
+.cm-record-select {
+  &.ng-select {
+    .ng-select-container {
+      height: 40px;
+    }
+  }
+}
+
+.cm-search-tooltip {
+  .tooltip-inner {
+    background-color: #616161;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: #616161;
+  }
+  &.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: #616161;
+  }
+  &.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #616161;
+  }
+  &.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #616161;
+  }
+}

@@ -1,0 +1,215 @@
+<div class="container py-5">
+  <div class="container cm-root-bg">
+    <div class="row">
+      <div class="col-12">
+        <div class="row flex-row-reverse">
+          <div class="col-md-6 cm-form-container">
+            <!--social icons-->
+            <div class="row">
+              <!-- heading -->
+              <div class="cm-heading-container">
+                <h3 class="text-center fw-bold mt-5 cm-header">Simple registration</h3>
+                <p class="text-center cm-text">with social media</p>
+              </div>
+              <!-- social -->
+              <div class="col-12 mb-3">
+                <div class="cm-social-icons">
+                  <a class="cm-social-icon">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a class="cm-social-icon">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                  <a class="cm-social-icon">
+                    <i class="bi bi-dribbble"></i>
+                  </a>
+                  <a class="cm-social-icon">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a class="cm-social-icon">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a class="cm-social-icon">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- p element with lines -->
+              <div class="d-flex justify-content-center">
+                <div class="col-md-4 d-flex justify-content-center">
+                  <p class="cm-two-lines">or</p>
+                </div>
+              </div>
+            </div>
+            <!-- form -->
+            <div
+              class="row justify-content-center">
+              <div class="col-md-9">
+                <form #form="ngForm"
+                      class="cm-form">
+                  <!--email-->
+                  <div class="cm-step pb-4 d-flex align-items-center"
+                       [ngClass]="{
+                       'cm--done': email.valid && !params.emailTouched,
+                       'cm--active': (params.emailTouched && email.invalid) || (params.emailTouched && email.valid),
+                       'cm--invalid': email.invalid && params.emailBlur
+                       }">
+                    <div class="emailSpan"
+                         [ngClass]="{'d-none': (email.untouched || params.emailEdited) || email.invalid
+                    || (email.valid && params.emailTouched)}">
+                      <span class="cm-span">
+                        {{ formModel.email }}</span>
+                      <i class="bi bi-pencil-fill cm-pencil-icon ms-2"
+                         (click)="onInputEdit(true, false, false)"></i>
+                    </div>
+                    <div class="d-flex emailCollapse"
+                         [ngClass]="{'d-none': (email.valid && !params.emailTouched) && !params.emailEdited}">
+                      <input #email="ngModel"
+                             [email]="true"
+                             autofocus
+                             [(ngModel)]="formModel.email"
+                             [ngClass]="{'cm-input-error': email.invalid && email.touched}"
+                             name="email"
+                             type="email"
+                             placeholder="E-mail"
+                             (focus)="onEmailFocus()"
+                             (blur)="onEmailBlur()"
+                             (keyup.enter)="onEmailBtn(form)"
+                             class="form-control cm-input"
+                             required>
+                      <button type="button"
+                              (click)="onEmailBtn(form)"
+                              [ngClass]="{'d-none': email.untouched && !params.emailTouched}"
+                              class="btn ms-4 btn-sm cm-btn">
+                        <i class="bi bi-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!--password-->
+                  <div class="cm-step d-flex"
+                       [ngClass]="{
+                       'cm--done': password.valid && !params.passwordTouched,
+                       'cm--active': (params.passwordTouched && password.invalid) || (params.passwordTouched && password.valid),
+                       'pb-4': password.valid && password.touched,
+                       'cm--invalid': password.invalid && params.passwordBlur
+                       }">
+                    <div class="passSpan"
+                         [ngClass]="{'d-none': params.passwordEdited || password.invalid
+                    || (password.valid && params.passwordTouched)}">
+                      <span class="cm-span">
+                        {{ formModel.password }}</span>
+                      <i class="bi bi-pencil-fill cm-pencil-icon ms-2"
+                         (click)="onInputEdit(false, true, false)"></i>
+                    </div>
+                    <div class="row align-items-center passCollapse"
+                         [ngClass]="{'d-none': (password.valid && !params.passwordTouched) && !params.passwordEdited}">
+                      <div class="col-md-9 d-flex align-items-baseline">
+                        <label for="password"
+                               class="ms-2 position-absolute cm-label">
+                          <span class="h6 small bg-white text-muted">Password</span>
+                        </label>
+                        <input #password="ngModel"
+                               #passwordRef
+                               [(ngModel)]="formModel.password"
+                               name="password"
+                               (focus)="onPasswordFocus()"
+                               (blur)="onPasswordBlur(form)"
+                               [ngClass]="{'cm-input-error': password.invalid && password.touched}"
+                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z\d$@$!%*?&].{8,16}$"
+                               type="password"
+                               (keyup.enter)="onPasswordBtn(form)"
+                               id="password"
+                               class="form-control mt-2 cm-input"
+                               required>
+                        <button type="submit"
+                                class="btn btn-sm ms-4 cm-btn cm-pass-btn"
+                                (click)="onPasswordBtn(form)"
+                                [ngClass]="{'d-none': password.untouched && !params.passwordTouched}">
+                          <i class="bi bi-arrow-right"></i>
+                        </button>
+                      </div>
+                      <p class="cm-text">Password must contain:</p>
+                      <div class="cm-text col-md-6">
+                        <ul class="cm-list">
+                          <li class="cm-list-item">lower-case</li>
+                          <li class="cm-list-item">upper-case</li>
+                        </ul>
+                      </div>
+                      <div class="cm-text col-md-6">
+                        <ul class="cm-list">
+                          <li class="cm-list-item">numbers</li>
+                          <li class="cm-list-item">8-16 characters</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!--countries-->
+                  <div class="cm-step d-flex"
+                       [ngClass]="{
+                            'pb-4': select.valid && select.touched,
+                            'cm--active': params.toggleTouched || params.passwordBlur,
+                            'cm--done': params.countryBlur || select.touched && select.valid
+                            }">
+                    <div class="d-flex"
+                         [ngClass]="{'d-none': params.countryEdited || select.untouched || params.countryTouched}">
+                      <span class="cm-span">{{ formModel.country }}</span>
+                      <i class="bi bi-pencil-fill cm-pencil-icon ms-2"
+                         (click)="onInputEdit(false, false, true)"></i>
+                    </div>
+                    <div class="pb-4"
+                         [ngClass]="{'d-none': (select.valid && params.countryBlur) && !params.countryEdited}">
+                      <button type="button"
+                              class="mb-0 cm-text --lg border-0 p-0 bg-transparent"
+                              (click)="collapse.toggle(); onTogglePressed()"
+                              [attr.aria-expanded]="!countryCollapsed">
+                        Select your country
+                      </button>
+                      <div #collapse="ngbCollapse"
+                           [(ngbCollapse)]="countryCollapsed">
+                        <div class="card">
+                          <ng-select #select="ngModel"
+                                     #countryRef
+                                     [items]="countries"
+                                     [(ngModel)]="formModel.country"
+                                     [clearable]="false"
+                                     [searchable]="false"
+                                     (change)="onSelectedCountry()"
+                                     bindLabel="countries"
+                                     (focus)="onCountryFocus()"
+                                     (blur)="onCountryBlur()"
+                                     placeholder="Country"
+                                     name="country">
+                          </ng-select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--everything-->
+                  <div class="cm-step pb-4 cm-text --lg"
+                       [ngClass]="{'cm--done': select.touched && select.valid}">
+                    <button type="button"
+                            class="mb-0 cm-text --lg border-0 p-0 bg-transparent"
+                            (click)="contentCollapse.toggle()"
+                            [attr.aria-expanded]="!contentCollapsed">
+                      Show everything
+                    </button>
+                    <div #contentCollapse="ngbCollapse"
+                         [(ngbCollapse)]="contentCollapsed">
+                      <div class="card">
+                        <ul class="mt-3">
+                          <li>E-mail: {{ formModel.email }}</li>
+                          <li>Password: {{ formModel.password }}</li>
+                          <li>Country: {{ formModel.country }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

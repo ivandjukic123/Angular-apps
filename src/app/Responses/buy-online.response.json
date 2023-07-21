@@ -1,0 +1,90 @@
+{
+  "banner": {
+    "image": {
+      "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+      "alt": "Fordonsbolaget"
+    },
+    "title": "Få Ett Bud På Din Snabbt Och Smidigt",
+    "text": "",
+    "button": {
+      "text": "",
+      "link": "",
+      "position": "right"
+    }
+  },
+  "features": {
+    "title": "VILLKOR FÖR DISTANSPAKETET",
+    "items": [
+      {
+        "button": {
+          "link": "interest",
+          "text": "Klicka for mer info"
+        },
+        "icon": "fa-solid fa-percent",
+        "title": "Sälj din bil pä under 24h",
+        "title_after": "FÖRMÅNLIG RÄNTA",
+        "text": "<p>Frán att du skickar in din bil för värdering till att du har<br />\npengarna pà kontot tar det oifTh mindre an 24h.</p>\n"
+      }
+    ]
+  },
+  "buy_car_online": {
+    "video": {
+      "icon": "fas fa-play",
+      "url": "www.youtube.com/embed/EfsnsAULdAM?autoplay=1&rel=0",
+      "thumbnail": {
+        "url": "https://wp-api-test.fordonsbolaget.se/wp-content/uploads/2018/09/DJI_0041.jpg",
+        "alt": "Fordonsbolaget"
+      },
+      "alt": ""
+    },
+    "text": "<p><!-- wp:heading --></p>\n<h2><strong>Köpa bil online</strong></h2>\n<p><!-- /wp:heading --></p>\n<p><!-- wp:paragraph --></p>\n<p>De begagnade bilarna finns i flera olika modeller från välkända märken såsom Tesla, Porsche, Volvo, Mercedes-Benz, med flera. Vi erbjuder även exklusiva bilar från bland annat Ferrari och Lamborghini. Utbudet när du vill <strong>köpa bil online</strong> varierar och beror på vad vi har fått in - men en sak kan vi garantera och det är att vi alltid har många bilar till salu så att du ska kunna hitta något som passar dig och dina ändamål. Vi brukar nästan alltid ha över <em>200 bilar i lager</em> att köpa, så om du letar efter en bil till salu har du hittat rätt!<br />När du ska köpa bil online hos oss kan du enkelt filtrera i vårt utbud för att få fram de bilarna som är intressanta för dig. Du kan filtrera på pris, miltal, årsmodell, färg, växellåda med mera. Utöver filterna erbjuder vi en sökfunktion där du bland annat kan söka på bilmärke, modell, motor och till och med utrustning. Vi på Fordonsbolaget gör det enkelt för dig att <strong>köpa bil online</strong> och på denna sida hittar du våra bilar till salu. <a href=\"/bilar-i-lager\">Se vårt lager här.</a></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:html --></p>\n<h4>Så här går det till</h4>\n<p><!-- /wp:html --></p>\n<p><!-- wp:html --></p>\n<ul style=\"color:#999;list-style-type:decimal!important;padding-left:20px\">\n<li>Leta reda på den bilen du är intresserad av att köpa</li>\n<li>Välj dina tillval till bilen, vinterhjul, utökad garanti eller dragkrok exempelvis.</li>\n<li>Välj enkelt hur du vill finansiera din bil, kontant företagsleasing eller avbetalning.</li>\n<li>Fyll i dina uppgifter och vips! Du har nu beställt din nya bil.</li>\n<li>Betalningslänkar och kontrakt skickas till din mailadress och bilen levereras efter 72 timmar till önskad leveransadress.</li>\n</ul>\n<p><!-- /wp:html --></p>\n"
+  },
+  "reco": {
+    "button": {
+      "link": "https://web-test.fordonsbolaget.se/bilar-i-lager/",
+      "text": "Läs samtliga rekommendationer från Reco"
+    },
+    "seller": "Säljare",
+    "title_before": "Vad tycker våra kunder?",
+    "title": "Rekommendationerrrr",
+    "title_after": "Våra rekommendationer kommer från Reco.se.\r\nGenom Reco kan du läsa om andras upplevelser hos oss innan ditt besök."
+  },
+  "references": {
+    "title": "Referenser",
+    "items": [
+      {
+        "title": "David, Gävle",
+        "subtitle": "Sålde Volvo XC40 & Dodge RAM 1500 online",
+        "text": "“Jag har precis sålt min pickup till Fordonsbolaget. En RAM 1500 från 2019. Det är en bil som normalt sätt är ganska svårsåld privat, men jag tog direktkontakt med Gustaf på inköp och fick ett riktigt bra pris direkt. Det gjorde att vi skrev avtal redan samma dag och dagen efter hade jag pengarna på kontot. Dem kom och hämtade bilen hemma hos mig, vilket gjorde det supersmidigt. Det var så smidigt att vi valde att göra affär på vår andra bil också.”",
+        "video_url": "https://www.youtube.com/embed/DCHg9SE1xPE?rel=0"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Villkor",
+    "image": {
+      "url": "https://wp-api.fordonsbolaget.se/wp-content/uploads/2021/03/IMG_20210302_111000.jpg",
+      "alt": ""
+    },
+    "items": [
+      {
+        "title": "FÖRMÅNLIG RÄNTA",
+        "text": "<p>Alla leveranser till distanskunder är med förmånlig ränta – alltid!<br />\nRäntan är rörlig och kan komma att ändras av banken.</p>\n"
+      }
+    ]
+  },
+  "metadata": {
+    "meta_tags": [
+      {
+        "name": "description",
+        "content": "Vi på Fordonsbolaget säljer nya Hondabilar och begagnade premiumbilar under ett och samma tak. Hos oss hittar du en kunnig verkstad som utför service och reparationer på alla bilar och modeller. Utöver det har vi vårt säljteam som konstant kämpar för att kunden ska känna att dem gjort en bra affär."
+      }
+    ],
+    "title": "Hem | Fordonsbolaget",
+    "url": "https://web-test.fordonsbolaget.se"
+  },
+  "default_car_image": {
+    "url": "https://cdn.shopify.com/s/files/1/0274/1202/9492/products/IMG_20200529_163000_1024x1024.jpg?v=1590720000",
+    "alt": "Bamboo Toothbrush"
+  }
+}

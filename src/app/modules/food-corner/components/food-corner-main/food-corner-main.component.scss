@@ -1,0 +1,116 @@
+.cm-recipes-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  max-width: 18rem;
+  min-height: 20rem;
+  border-radius: 0.7rem;
+  box-shadow: rgb(99 99 99 / 20%) 0 2px 6px 0;
+  cursor: pointer;
+
+  &:hover {
+    background: lightgray;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.cm-card-img {
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.cm-recipe {
+  margin-right: 0;
+
+  @media (min-width: 768px) {
+    margin-right: 1rem;
+  }
+}
+
+.cm-item-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cm-badge {
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 14px;
+  min-height: 25px;
+  font-size: 1rem;
+  line-height: 15px;
+  margin-right: 0.7rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  background-color: #3f9588;
+  box-shadow: rgb(50 50 93 / 25%) 0 6px 12px -2px, rgb(0 0 0 / 30%) 0 3px 7px -3px;
+
+  &:hover {
+    background-color: #848484;
+  }
+}
+
+.cm-wishlist-btn {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+  border-radius: 50px;
+  position: absolute;
+  top: 0.4rem;
+  right: 1rem;
+
+  &:hover {
+    background-color: lightslategray;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.cm-to-wishlist-icon {
+  font-size: 1.4rem;
+  color: #dc482c;
+}
+
+.cm-wishlist-icon {
+  font-size: 1.4rem;
+}
+
+.cm-wishlist {
+  position: relative;
+  height: 2.375rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F0AF3C;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.1875rem;
+
+  &:hover {
+    background: #848484;
+    color: white;
+  }
+}
+
+.cm-main-button {
+  color: white;
+  border-color: darkslategray;
+  background: #F0AF3C;
+  width: 100%;
+  border-radius: 17px;
+
+  &:hover {
+    background: #848484;
+    color: #ffffff;
+  }
+}
