@@ -1,6 +1,13 @@
 # Angular apps
 
-There are several angular apps.
+There are several angular apps. 
+![screencapture-localhost-4200-food-corner-2023-11-19-18_24_21](https://github.com/ivandjukic123/Angular-apps/assets/98217204/41bdb465-75a6-444e-9663-036c562b68e4)
+
+![Untitled design](https://github.com/ivandjukic123/Angular-apps/assets/98217204/238fcd68-0129-454d-a6a9-ad8f10b33a02)
+
+![Screenshot from 2023-11-19 18-23-08](https://github.com/ivandjukic123/Angular-apps/assets/98217204/11551a15-cc38-4653-a247-3480a9f6bff5)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
 
 ## Development server
