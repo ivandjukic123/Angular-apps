@@ -1,9 +1,10 @@
 # Angular apps
 
-There are several angular apps. 
+There are several angular apps. This projects includes:
 * API responses
 * RxJs
 * Bootstrap/NgBootstrap
+* and more...
   
 ![screencapture-localhost-4200-food-corner-2023-11-19-18_24_21](https://github.com/ivandjukic123/Angular-apps/assets/98217204/41bdb465-75a6-444e-9663-036c562b68e4)
 
