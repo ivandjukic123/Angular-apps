@@ -1,6 +1,6 @@
 # Angular apps
 
-There are several angular apps. This projects includes:
+There are several angular apps. These projects include:
 * API responses
 * RxJs
 * Bootstrap/NgBootstrap
