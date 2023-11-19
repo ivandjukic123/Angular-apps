@@ -3,6 +3,8 @@
 There are several angular apps. These projects include:
 * API responses
 * RxJs
+* TypeScript
+* Scss
 * Bootstrap/NgBootstrap
 * and more...
   
