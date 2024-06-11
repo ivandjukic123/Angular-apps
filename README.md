@@ -15,7 +15,7 @@ There are several angular apps. These projects include:
 ![Screenshot from 2023-11-19 18-23-08](https://github.com/ivandjukic123/Angular-apps/assets/98217204/11551a15-cc38-4653-a247-3480a9f6bff5)
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
+No more projects in Angular because I mostly write code that makes money.
 
 ## Development server
 
